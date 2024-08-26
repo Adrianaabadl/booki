@@ -1,0 +1,210 @@
+/****** General ***********/
+header img {
+    width: 100px;
+    height: auto;
+    margin: 15px;
+}
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+.fa-solid, .fa-regular {
+    color: var(--main-color);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutralStar {
+    color: var(--main-bg-color)
+}
+
+/****** Accommodation And Popular ***********/
+.accommodation-and-popular {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Espacio entre las dos secciones */
+    margin-top: 33px;
+    width: calc(100% - 50px); /* Ajusta el ancho total, restando el padding de .main-container */
+}
+
+.accommodation-and-popular section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    width: 70%; /* Ajuste de ancho para que quepan lado a lado */
+    height: 950px; /* Altura fija */
+    
+}
+
+/****** Accommodation ***********/
+.accommodation {
+    margin-bottom: 30px;
+}
+
+/****** Popular ***********/
+.popular-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Espacio entre tarjetas */
+    margin-top: 33px;
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho del contenedor principal */
+    box-sizing: border-box;
+}
+
+.popular-cards .card {
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 30px); /* Ajusta el ancho de cada tarjeta teniendo en cuenta el espacio entre ellas */
+    background-color: white;
+    /* margin-left: 80px; */
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    box-sizing: border-box;
+}
+
+.popular-cards img {
+    width: 100%;
+    height: 146px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+.popular-cards .card-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.popular-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.popular-cards .card-subtitle {
+    margin: 0;
+}
+
+.popular-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+
+
+.popular {
+    max-width: 600px; /* Ajusta según el tamaño deseado */
+    margin: 0 auto; /* Centra la sección horizontalmente */
+    margin-right: 20px;
+    padding: 0 20px; /* Opcional: Ajusta el padding si es necesario */
+}
+.popular {
+    padding: 0 20px; /* Ajusta el padding para reducir el espacio interno */
+}
+
+/* Ajusta el ancho del contenedor de las tarjetas */
+.popular-accommodation {
+    display: flex;
+    flex-direction: column; /* Alinea las tarjetas en una columna */
+    gap: 30px; /* Espacio entre tarjetas */
+    margin-top: 33px;
+    align-items: center; /* Centra las tarjetas horizontalmente */
+    max-width: 60%; /* Ajusta el ancho máximo del contenedor */
+    margin-left: auto; /* Centra el contenedor horizontalmente */
+    margin-right: auto; /* Centra el contenedor horizontalmente */
+    padding: 0 10px; /* Reduce el padding interior del contenedor */
+}
+
+/* Ajusta el tamaño de las tarjetas */
+.popular-accommodation .card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    width: 100%; /* Asegura que cada tarjeta ocupe el 100% del ancho del contenedor */
+    max-width: 300px; /* Reduce el ancho máximo de las tarjetas */
+    box-sizing: border-box;
+}
+
+/* Ajusta el tamaño de las imágenes en las tarjetas */
+.popular-accommodation img {
+    width: 100%;
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    max-height: 150px; /* Limita la altura máxima de la imagen */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+/* Ajusta el padding y el tamaño del contenido dentro de las tarjetas */
+.popular-accommodation .card-content {
+    padding: 10px; /* Reduce el padding interior de las tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* Ajusta el margen de los elementos de texto dentro de las tarjetas */
+.popular-accommodation .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.popular-accommodation .card-subtitle {
+    margin: 0;
+}
+
+.popular-accommodation .card-rating {
+    margin-bottom: 5px;
+}
+
