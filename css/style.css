@@ -102,8 +102,10 @@ body {
 }
 
 /****** Filters ***********/
+/****** Filters ***********/
 .filters {
   display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -132,6 +134,23 @@ body {
 .selected {
   background-color: #e0efff;
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column; /* Los filtros se alinearán en una sola columna */
+  }
+
+  .filter-button {
+    width: 100%; /* Los botones ocuparán todo el ancho disponible */
+    justify-content: center; /* Centra el contenido dentro de los botones */
+  }
+
+  .filter-button img {
+    margin-right: 8px; /* Reduce el margen en pantallas pequeñas */
+  }
+}
+
 
 /****** Accommodation And Popular ***********/
 .accommodation-and-popular {
