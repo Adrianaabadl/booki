@@ -348,6 +348,7 @@ body {
 }
 
 /****** Things to Do ***********/
+/****** Things to Do ***********/
 .things-to-do {
   padding: 20px;
   background-color: transparent;
@@ -361,11 +362,10 @@ body {
 
 .things-to-do-container {
   display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas bajen a otra fila si no caben */
   justify-content: space-between; /* Distribuye las tarjetas con espacio entre ellas */
   width: 100%; /* Ocupa todo el ancho disponible */
-  overflow-x: auto; /* Permite desplazamiento horizontal si las tarjetas no caben en la pantalla */
   box-sizing: border-box;
-  flex-wrap: wrap; /* Permite que las tarjetas bajen a otra fila si no caben */
   background-color: transparent;
 }
 
@@ -374,9 +374,9 @@ body {
   padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   flex: 1 1 calc(25% - 20px); /* Permite que cada tarjeta ocupe el mismo espacio y se ajusten 4 por fila */
-  margin: 10px 20px; /* Espacio entre tarjetas */
+  margin: 10px 0; /* Espacio entre tarjetas, ajustado para trabajar con flex-wrap */
   box-sizing: border-box; /* Incluye padding y border en el ancho total */
-  max-width: calc(25% - 40px); /* Ajusta el ancho máximo para que las tarjetas se distribuyan en 4 por fila, restando el margen */
+  max-width: calc(25% - 20px); /* Ajusta el ancho máximo para que las tarjetas se distribuyan en 4 por fila */
 }
 
 .things-to-do img {
@@ -395,6 +395,29 @@ body {
   font-size: 16px;
   font-weight: bold;
 }
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 1200px) {
+  .things-to-do .card {
+    flex: 1 1 calc(33.333% - 20px); /* 3 tarjetas por fila */
+    max-width: calc(33.333% - 20px);
+  }
+}
+
+@media (max-width: 900px) {
+  .things-to-do .card {
+    flex: 1 1 calc(50% - 20px); /* 2 tarjetas por fila */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .things-to-do .card {
+    flex: 1 1 100%; /* 1 tarjeta por fila */
+    max-width: 100%;
+  }
+}
+
 
 /****** Footer ***********/
 
