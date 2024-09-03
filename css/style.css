@@ -348,6 +348,16 @@ body {
 }
 
 /****** Things to Do ***********/
+.things-to-do {
+  padding: 20px;
+  background-color: transparent;
+}
+
+.things-to-do h3 {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
 
 .things-to-do-container {
   display: flex;
@@ -355,19 +365,18 @@ body {
   width: 100%; /* Ocupa todo el ancho disponible */
   overflow-x: auto; /* Permite desplazamiento horizontal si las tarjetas no caben en la pantalla */
   box-sizing: border-box;
+  flex-wrap: wrap; /* Permite que las tarjetas bajen a otra fila si no caben */
+  background-color: transparent;
 }
 
 .things-to-do .card {
-  background-color: white;
   border-radius: 20px;
   padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  flex: 1; /* Permite que cada tarjeta ocupe el mismo espacio */
-  margin: 0 20px; /* Espacio horizontal entre tarjetas */
+  flex: 1 1 calc(25% - 20px); /* Permite que cada tarjeta ocupe el mismo espacio y se ajusten 4 por fila */
+  margin: 10px 20px; /* Espacio entre tarjetas */
   box-sizing: border-box; /* Incluye padding y border en el ancho total */
-  max-width: calc(
-    25% - 20px
-  ); /* Ajusta el ancho máximo para que las tarjetas se distribuyan en 4 por fila, restando el margen */
+  max-width: calc(25% - 40px); /* Ajusta el ancho máximo para que las tarjetas se distribuyan en 4 por fila, restando el margen */
 }
 
 .things-to-do img {
@@ -376,9 +385,19 @@ body {
   object-fit: cover;
 }
 
+.things-to-do .container {
+  text-align: center;
+  padding: 10px;
+}
+
+.things-to-do .container p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 /****** Footer ***********/
 
-/* Estilos para el footer */
 footer {
   display: flex;
   justify-content: space-between; /* Alinea las columnas de forma equitativa */
