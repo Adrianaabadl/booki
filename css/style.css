@@ -60,6 +60,23 @@ body {
 }
 
 /****** Search Container ***********/
+.location {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #e8e8e8;
+  border-radius: 20px 0 0 20px;
+}
+
+.location-icon {
+  width: 24px;
+  height: 24px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/447/447031.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
 .search-container {
   display: flex;
   align-items: center; /* Alinea verticalmente los elementos dentro del contenedor */
@@ -71,15 +88,49 @@ body {
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-right: 10px; /* Espacio entre el campo de búsqueda y el botón */
+  height: auto;
 }
 
 .search-container button {
-  padding: 10px 20px;
-  border: none;
-  background-color: var(--main-color);
+  background-color: #0065FC;
   color: white;
-  border-radius: 5px;
+  border: none;
+  padding: 18px 20px;
+  font-size: 18px;
+  border-radius: 0 20px 20px 0;
   cursor: pointer;
+}
+
+/****** Filters ***********/
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: white;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.filter-button img {
+  margin-right: 10px;
+}
+
+.filter-button:hover {
+  background-color: #f0f0f0;
+}
+
+.selected {
+  background-color: #e0efff;
 }
 
 /****** Accommodation And Popular ***********/
