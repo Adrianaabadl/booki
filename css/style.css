@@ -1,11 +1,9 @@
 /* General */
-
 * {
   font-family: "Raleway", sans-serif;
 }
 
 /*seach */
-
 .search-bar{
     margin-left: 35px;
   }
@@ -66,7 +64,6 @@
   }
 
 /* Acomodation */
-
 Main {
     display: flex;
     margin-top: 30px;
@@ -98,7 +95,7 @@ Main {
   }
   
   .accommodation-section .border-picture{
-    width: 220px;
+    width: 27%;
     height: auto;
     background: white;
     margin-bottom: 40px;
