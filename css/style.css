@@ -3,6 +3,14 @@
   font-family: "Raleway", sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
 /*seach */
 .search-bar{
     margin-left: 35px;
@@ -134,7 +142,7 @@ Main {
   }
   
   /****** popular *******/
-  .popular-section{
+  .popular-section {
     background: #F2F2F2;
     width: 30%;
     height: 650px;
@@ -157,15 +165,13 @@ Main {
     border-radius: 20px;
     background-color: white;
     height: 145px;
-    width: 290px;
+    width: 60%;
     margin-bottom: 30px;
+    padding: 0px;
     display: flex;
     margin-left: 40px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.062);
     transition: 0.8s;
-  }
-  .popular-section .border-popular:hover{
-    transform: scale(1.07);
   }
   
   .popular-section img{
@@ -389,14 +395,6 @@ header img {
     
   }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style-type: none;
-  text-decoration: none;
-}
-
 a {
   color: black;
 }
@@ -612,7 +610,7 @@ h2 {
       .popular-section img{
         height: 140px;
         width: 250px;
-        padding: 1%;
+        padding: 1% 10px;
       }
       .popular-section .text-picture{
         margin-left: 30px;
