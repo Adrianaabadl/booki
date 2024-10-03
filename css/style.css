@@ -627,17 +627,19 @@ h2 {
   
       /*******activity-section*******/
       .activity-section{
+        display:flex;
+        text-wrap: wrap;
         height: 1900px;
         margin-left: 55px;
       }
       
       .activity-section .bloc-card{
-        flex-direction: column;
+        flex-direction: row;
         width: 90%;
         padding-left: 0;
       }
       .activity-section .bloc-card{
-        flex-direction: column;
+        flex-direction: row;
         width: 90%;
       }
       .activity-section img{
