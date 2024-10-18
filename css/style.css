@@ -198,8 +198,9 @@ Main {
   }
 
 /* Activity */
-.activity-section{
-    margin-left: 30px;
+.activity-section {
+    display: flex;
+    flex-direction: column;
   }
   
   .activity-section h2{
@@ -259,6 +260,29 @@ Main {
   }
 
 
+  .things-to-do-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* flex-wrap: wrap; */
+    /*
+    TODO: Use gap thing instead not space-between
+    */
+    justify-content: space-between; 
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+
+  /*TODO: revisa */
+  .things-to-do-container .border-picture {
+    box-shadow: 0px 3px 15px 0px #0000001A;
+    
+  }
+  
+  
+  
+
 /* Filter */
 .filters {
   display: flex;
@@ -306,6 +330,10 @@ Main {
 
 .selected {
   background-color: #e0efff;
+}
+
+@media (min-width: 549px) {
+  /* Styles to override on this breakpoint and above */
 }
 
 /* Media Queries for Responsive Design */
@@ -626,12 +654,13 @@ h2 {
       }
   
       /*******activity-section*******/
-      .activity-section{
+      .activity-section {
         display:flex;
-        text-wrap: wrap;
-        height: 1900px;
+        /* text-wrap: wrap; */
+        /* height: 1900px; TODO: Avoid max HEIGHT instead a max higth -> it will not be responsive*/
         margin-left: 55px;
       }
+     
       
       .activity-section .bloc-card{
         flex-direction: row;
