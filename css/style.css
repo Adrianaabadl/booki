@@ -398,8 +398,6 @@ footer .footer-column b {
 
 
 
-
-
 /* ************Responsive section ***************/
 @media screen and (max-width: 992px){
   *{
@@ -426,6 +424,7 @@ footer .footer-column b {
     padding-bottom: 20px;
     border-top: none;
   }
+
   /************ search **************/
   .search-bar input{
     width: 220px;
@@ -450,7 +449,7 @@ footer .footer-column b {
     font-size: 119%;
   }
 
-  /********* filters*************/
+  /********* filters *************/
 
   /*********info***********/
   .info-section h2{
@@ -499,14 +498,15 @@ footer .footer-column b {
     justify-content: start;
 }
   /********popular section*********/
-  .popular-section{
-    flex: none;
-    width: 90%;
-    margin-left: 0;
+  .popular-section {
+    display: block;
+    width: 100%;
+    margin-left: -5%;
     padding: 30px 5%;
     border-radius: 0;
-    height: 560px;
+    height: 600px;
   }
+
   .popular-section .title-graph{
     margin-top: 0;
     display: flex;
@@ -514,10 +514,11 @@ footer .footer-column b {
   }
   .popular-section .border-popular{
     width: auto;
+    padding: 2%;
     margin-left: 0;
     margin-bottom: 15px;
   }
-  .popular-section img{
+  .popular-section img {
     height: 140px;
     width: 250px;
     padding: 1% 10px;
@@ -540,8 +541,6 @@ footer .footer-column b {
     display:flex;
     margin-left: 55px;
   }
- 
-  
   .activity-section .bloc-card{
     flex-direction: row;
     width: 90%;
@@ -564,13 +563,6 @@ footer .footer-column b {
   }
   .activity-section .card-column .border-activity{
     margin-bottom: 25px;
-  }
-  
-  /******* footer*****/
-
-  .bloc-footer{
-    height: auto;
-    flex-direction: column;
   }
 }
 
@@ -598,9 +590,6 @@ footer .footer-column b {
 @media screen and (max-width: 441px){
 
   /***** navigation bar*****/
-  /* header nav{
-    flex-basis: 100%;
-  } */
   header ul{
     flex-wrap: nowrap;
   }
@@ -637,8 +626,8 @@ footer .footer-column b {
     padding: 2%
   }
 
-  /******section 6 activités******/
-  .activity-section{
+  /******section 6 activites******/
+  .activity-section {
     height: 1300px;
   }
   .activity-section .border-activity{
