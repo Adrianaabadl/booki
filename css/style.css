@@ -390,6 +390,7 @@ footer .footer-column b {
 
 /* ************Responsive section *************** */
 
+
 @media screen and (max-width: 992px){
   * {
     box-sizing: content-box;
@@ -436,11 +437,9 @@ footer .footer-column b {
     width: 50px;
     margin-left: -10px;
   }
-   .search-bar h1{
+   .search-bar h1 {
     font-size: 119%;
   }
-
-  /********* filters *************/
 
   /*********info***********/
   .info-section h2{
@@ -449,7 +448,7 @@ footer .footer-column b {
   }
 
   /******* main **********/
-  main{
+  main {
     margin-left: 0;
     flex-direction: column-reverse;
   }
