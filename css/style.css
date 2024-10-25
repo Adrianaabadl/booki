@@ -116,8 +116,6 @@ header .border-blue:hover {
     margin-left: -10px;
   }
 
-  
-
 /****** Filter ***********/
 .filters-section {
   margin: 15px;
@@ -157,13 +155,13 @@ header .border-blue:hover {
   color: #000;
   font-weight: bold;
   justify-content: center;
-  flex: 0 0 48%; /* Se ajusta al 48% de ancho en móviles */
+  flex: 0 0 48%;
   box-sizing: border-box;
 }
 
 .filter-button i {
-  margin-right: 10px; /* Margen reducido para móviles */
-  font-size: 20px; /* Tamaño ajustado */
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 .filter-button img {
@@ -177,7 +175,44 @@ header .border-blue:hover {
 .filter-button.selected {
   background-color: #e0efff;
 }
+/****** Info ***********/
+.info-section {
+  margin-left: 5px;
+}
+.info {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
 
+.info-section h2 {
+  margin-left: 10px;
+  font-size: 106%;
+  font-weight: 300;
+  color: rgb(59, 59, 59);
+  margin: 5px;
+}
+
+.info-section .circle-info {
+  border: #F2F2F2 solid 2px;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  color: #0065fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.info-section i {
+  font-size: 81%;
+  
+}
+
+.info-section a {
+  color: black;
+}
 
 /****** Acomodation ***********/
 Main {
@@ -339,43 +374,6 @@ Main {
   }  
 
 
-/****** Info ***********/
-.info-section {
-    margin-left: 5px;
-  }
-  .info {
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-  }
-  
-  .info-section h2 {
-    margin-left: 10px;
-    font-size: 106%;
-    font-weight: 300;
-    color: rgb(59, 59, 59);
-  }
-
-  .info-section .circle-info{
-    border: #F2F2F2 solid 2px;
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
-    color: #0065fc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30px;
-  }
-  
-  .info-section i{
-    font-size: 81%;
-    
-  }
-
-  .info-section a {
-    color: black;
-  }
 /****** Footer ***********/
 footer {
   display: flex;
@@ -430,6 +428,12 @@ footer .footer-column b {
     width: 54px;
     height: 21px;
   }
+  
+  /****info******/
+  .info-section .circle-info { 
+    margin: 0 0 0 20px;
+  }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -637,11 +641,6 @@ footer .footer-column b {
 }
 
 @media screen and (max-width: 441px){
-  /****info******/
-  .info-section .circle-info { 
-    margin: 0 0 20px 20px;
-  }
-
   /***** accommodation-section*****/
   .accommodation-section .border-picture {
     height: 210px;
