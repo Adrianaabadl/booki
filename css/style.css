@@ -59,9 +59,19 @@ header .border-blue:hover {
 
 /****** Search ***********/
 .search-bar {
-    margin-left: 35px;
+    margin: 25px;
   }
   
+  .search-bar h2 {
+    font-size: 131%;
+  }
+
+  .search-bar p {
+    margin-top: 10px;
+    margin-bottom: 20px; 
+    color: rgb(78, 77, 77);
+  }
+
   .search-bar .map {
     display: flex;
   }
@@ -103,18 +113,8 @@ header .border-blue:hover {
     cursor: pointer;
   }
   
-  .fa-search{
+  .search-bar .fa-search {
     color: transparent;
-  }
-  
-  h1 {
-      margin-top: 25px;
-      margin-bottom: 10px;
-  }
-  
-  .search-bar p {
-    margin-bottom: 20px; 
-    color: rgb(78, 77, 77);
   }
 
 /****** Filter ***********/
@@ -180,7 +180,7 @@ Main {
     border-radius: 20px;
     margin-right: 30px;
   }
-  .accommodation-section h2{
+  .accommodation-section h2 {
     margin: 40px 0 40px 20px;
   }
   .bloc1 {
@@ -299,7 +299,7 @@ Main {
     flex-direction: column;
   }
   
-  .activity-section h2{
+  .activity-section h2 {
     margin: 40px 0 30px 30px;   
   }
   
@@ -337,7 +337,7 @@ Main {
     margin-top: 30px;
   }
   
-  .info-section h2{
+  .info-section h2 {
     margin-left: 10px;
     font-size: 106%;
     font-weight: 300;
@@ -364,11 +364,6 @@ Main {
   .info-section a {
     color: black;
   }
-
-  h2 {
-    font-size: 131%;
-  }
-
 /****** Footer ***********/
 footer {
   display: flex;
@@ -470,7 +465,7 @@ footer .footer-column b {
   }
 
   /*********info***********/
-  .info-section h2{
+  .info-section h2 {
     font-size: 95%;
     margin-left: 10px;
   }
@@ -497,7 +492,7 @@ footer .footer-column b {
     height: auto;
     background-color: white
   }
-  .accommodation-section h2{
+  .accommodation-section h2 {
     margin: 25px 0;
   }
   .accommodation-section .border-picture{
