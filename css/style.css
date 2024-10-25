@@ -28,9 +28,10 @@ header {
   margin-bottom: 25px;
 }
 
-header nav{
+header nav {
   margin-top: 15px;
 }
+
 header ul {
   display: flex; 
   flex-wrap: wrap;
@@ -40,11 +41,11 @@ header ul li {
   margin-right: 40px;
 }
 
-header .border-blue{
+header .border-blue {
   padding: 36px;
 }
 
-header .border-blue:hover{
+header .border-blue:hover {
   border-top: solid 3px #0065fc;
   color: #0065fc;
   padding: 36px;
