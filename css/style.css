@@ -504,12 +504,6 @@ footer .footer-column b {
 }
 
 @media screen and (max-width: 992px){
-  /*********info***********/
-  .info-section h2 {
-    font-size: 95%;
-    margin-left: 10px;
-  }
-
   /******* main **********/
   main {
     margin-left: 0;
