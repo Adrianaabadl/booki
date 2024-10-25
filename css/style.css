@@ -23,7 +23,7 @@ header img {
   display: block;
   margin: auto;
   padding-left: 40px;
-  min-width: 100px;
+  min-width: 80px;
   width: 8%;
 }
 
@@ -86,36 +86,37 @@ header .border-blue:hover {
     align-items: center;
     font-size: 112%
   }
-  
+
   .search-bar input {
     height: 50px;
-    width: 230px;
+    width: 250px;
     border: #f2f2f2 1px solid;
     font-weight: 600;
     font-size: 119%;
   }
-  
   .search-bar input::placeholder {
     color: black;
     padding-left: 20px; 
   }
-  
+
   .search-bar .search {
-    border-radius: 0 10px 10px 0;
-    height: 50px;
-    width: 120px;
+    width: 50px;
+    display: none;
+  }
+
+  .search-bar .fa-search {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
+    background: #0065fc;
     color: white;
-    font-weight: 600;
-    background-color: #0065fc;
     cursor: pointer;
+    width: 50px;
+    margin-left: -10px;
   }
+
   
-  .search-bar .fa-search {
-    color: transparent;
-  }
 
 /****** Filter ***********/
 .filters {
@@ -392,7 +393,6 @@ footer .footer-column b {
 
 /* ************Responsive section *************** */
 @media screen and (min-width: 768px) {
-
 * {  
     box-sizing: border-box;
   }
@@ -400,7 +400,6 @@ footer .footer-column b {
     margin: 25px;
     margin-bottom: 0;
   }
-
  /* ************ navigation bar ***************/
  header {
   display: flex;
@@ -437,33 +436,30 @@ footer .footer-column b {
     color: none;
     text-decoration: none;
   }
-}
 
-@media screen and (max-width: 992px){
-  /************ search **************/
-  .search-bar input{
-    width: 220px;
-    font-size: 100%;
-  }
-  .search-bar .search{
-    width: 50px;
-    display: none;
-  }
-  .search-bar .fa-search{
+  /* ************ search ***************/
+   .search-bar .search {
+    border-radius: 0 15px 10px 0;
+    height: 50px;
+    width: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
-    background: #0065fc;
     color: white;
+    font-weight: 600;
+    background-color: #0065fc;
     cursor: pointer;
-    width: 50px;
-    margin-left: -10px;
+    margin-top: unset;
   }
-   .search-bar h1 {
-    font-size: 119%;
+  
+   .search-bar .fa-search {
+    color: transparent;
+    display: none;
   }
+   
+}
 
+@media screen and (max-width: 992px){
   /*********info***********/
   .info-section h2 {
     font-size: 95%;
@@ -582,20 +578,20 @@ footer .footer-column b {
 @media screen and (max-width: 550px){
 
   /* popular */
-  .popular-section h4{
+  .popular-section h4 {
     font-size: 100%;
   }
-  .popular-section p{
+  .popular-section p {
     font-size: 87%;
   }
-  .popular-section .star{
+  .popular-section .star {
     font-size: 87%;
     margin-top: 25px;
   }
-  .popular-section img{
+  .popular-section img {
     width: 160px;
   }
-  .activity-section{
+  .activity-section {
     margin-left: 30px;
   }
 }
@@ -603,29 +599,29 @@ footer .footer-column b {
 @media screen and (max-width: 441px){
 
   /***** search bar*****/
-  .search-bar h1{
+  .search-bar h1 {
     width: 270px;
   }
-  .search-bar p{
+  .search-bar p {
     font-size: 14.4px;
   }
   /****info******/
-  .info-section .circle-info{
+  .info-section .circle-info { 
     margin: 0 0 20px 20px;
   }
 
   /***** accommodation-section*****/
-  .accommodation-section .border-picture{
+  .accommodation-section .border-picture {
     height: 210px;
     padding-bottom: 0;
   }
-  .accommodation-section img{
+  .accommodation-section img {
     height: 120px;
     width: 100%;
   }
 
   /******popular-section*****/
-  .popular-section img{
+  .popular-section img {
     width: 130px;
     height: 140px;
     padding: 2%
@@ -635,15 +631,15 @@ footer .footer-column b {
   .activity-section {
     height: 1300px;
   }
-  .activity-section .border-activity{
+  .activity-section .border-activity {
     height: 155px;
   }
-  .activity-section img{
+  .activity-section img {
     height: 120px;
   }
   
   /****** footer***** */
-  footer ul{
+  footer ul {
     margin-bottom: 10px;
   }
   
