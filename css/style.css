@@ -1,31 +1,30 @@
 /****** General ***********/
-* {  
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    text-decoration: none;
-}
-
-body {
-  margin: 25px;
-  margin-bottom: 0;
+* {
+  box-sizing: content-box;
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
 }
 
 /****** Navigation ***********/
-header img {
-  min-width: 100px;
-  width: 8%;
-  margin-left: 50px;
+header {
+  display: block;
+  border-bottom: 3px solid #f2f2f2;
+  margin-top: 55px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: none; 
 }
 
-header {
-  display: flex;
-  justify-content: space-between; 
-  margin-top: 25px;
-  margin-bottom: 25px;
+header img {
+  display: block;
+  margin: auto;
+  padding-left: 40px;
+  min-width: 100px;
+  width: 8%;
 }
 
 header nav {
@@ -33,22 +32,29 @@ header nav {
 }
 
 header ul {
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;
 }
 
 header ul li {
-  margin-right: 40px;
+  margin-right: 0;
+}
+
+header ul li a {
+  color: black;
 }
 
 header .border-blue {
-  padding: 36px;
+  padding: 20px;
 }
 
 header .border-blue:hover {
-  border-top: solid 3px #0065fc;
+  border-bottom: #0065fc solid 3px;
+  padding-bottom: 20px;
+  border-top: none;
   color: #0065fc;
-  padding: 36px;
 }
 
 /****** Search ***********/
@@ -79,7 +85,7 @@ header .border-blue:hover {
     font-size: 119%;
   }
   
-  .search-bar input::placeholder{
+  .search-bar input::placeholder {
     color: black;
     padding-left: 20px; 
   }
@@ -355,7 +361,7 @@ Main {
     
   }
 
-  a {
+  .info-section a {
     color: black;
   }
 
@@ -390,34 +396,55 @@ footer .footer-column b {
 
 
 /* ************Responsive section *************** */
+@media screen and (min-width: 768px) {
 
+* {  
+    box-sizing: border-box;
+  }
+  body {
+    margin: 25px;
+    margin-bottom: 0;
+  }
+
+ /* ************ navigation bar ***************/
+ header {
+  display: flex;
+  margin-top: 0;
+  padding-bottom: 0;
+  }
+
+ header img {
+    margin-left: 50px;
+    padding-left: 0;
+  }
+
+  header ul {
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+  header ul li {
+    margin-right: 80px;
+  }
+
+  header .border-blue {
+    padding: 0;
+  }
+  
+  header .accommodation {
+    /* border-top: #0065fc solid 2px;  */
+    padding: 5px;
+    color: none;
+  }
+
+  header .border-blue:hover {
+    border-bottom: none;
+    border-top: none;
+    color: none;
+    text-decoration: none;
+  }
+}
 
 @media screen and (max-width: 992px){
-  * {
-    box-sizing: content-box;
-  }
-
-  /* ************navigation bar ***************/
-  header {
-    display: block;
-    border-bottom: 3px solid #f2f2f2;
-    padding-bottom: 20px;
-  }
-  header img{
-    display: block;
-    margin: auto;
-    padding-left: 40px;
-  }
-  header ul {
-    justify-content: space-around;
-    margin-top: 30px;
-  }
-  header .border-blue:hover{
-    border-bottom: #0065fc solid 3px;
-    padding-bottom: 20px;
-    border-top: none;
-  }
-
   /************ search **************/
   .search-bar input{
     width: 220px;

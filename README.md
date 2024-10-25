@@ -1,23 +1,14 @@
 # Booki
 
+## Dudas 
 
-Cambios
+1. De la barra <nav> tengo que pegar a la esquina, intente quitando margenes pero no me salio, lo otro es, al hacer hover, debe ponerse ese border-top ?
 
-/**
 
-Borrado:
-
-/* @media (max-width: 768px) {
-  footer {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+```css
+  header .accommodation {
+    /* border-top: #0065fc solid 2px;  */
+    padding: 5px;
+    color: none;
   }
-
-  footer .footer-column {
-    padding: 10px 0;
-    text-align: center;
-  }
-}
-
-**/
+```
