@@ -119,18 +119,31 @@ header .border-blue:hover {
   
 
 /****** Filter ***********/
+.filters-section {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
 .filters {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
 }
 
 .filters h3 {
-  margin: 10px 5px 5px 35px;
-  width: 54px;
-  height: 21px;
+  margin: 10px 5px 5px 10px;
+  font-size: 18px;
+  width: auto;
+  height: auto;
+}
+
+.filter-buttoms-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .filter-button {
@@ -143,27 +156,25 @@ header .border-blue:hover {
   text-decoration: none;
   color: #000;
   font-weight: bold;
+  justify-content: center;
+  flex: 0 0 48%; /* Se ajusta al 48% de ancho en móviles */
+  box-sizing: border-box;
 }
 
 .filter-button i {
-  margin-right: 20px;
-  font-size: 24px;
-}
-
-.filter-icon i {
-  margin-right: 20px;
-  font-size: 10px;
+  margin-right: 10px; /* Margen reducido para móviles */
+  font-size: 20px; /* Tamaño ajustado */
 }
 
 .filter-button img {
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .filter-button:hover {
   background-color: #f0f0f0;
 }
 
-.selected {
+.filter-button.selected {
   background-color: #e0efff;
 }
 
@@ -392,6 +403,35 @@ footer .footer-column b {
 
 
 /* ************Responsive section *************** */
+@media (min-width: 550px) {
+  .filters-section {
+    margin: 0;
+  }
+  .filters {
+    flex-direction: row;
+  }
+
+  .filter-buttoms-section {
+    gap: 10px;
+  }
+
+  .filter-button {
+    justify-content: start;
+    flex: initial;
+  }
+
+  .filter-button i {
+    margin-right: 20px;
+    font-size: 24px;
+  }
+
+  .filters h3 {
+    margin: 10px 5px 5px 35px;
+    width: 54px;
+    height: 21px;
+  }
+}
+
 @media screen and (min-width: 768px) {
 * {  
     box-sizing: border-box;
@@ -597,14 +637,6 @@ footer .footer-column b {
 }
 
 @media screen and (max-width: 441px){
-
-  /***** search bar*****/
-  .search-bar h1 {
-    width: 270px;
-  }
-  .search-bar p {
-    font-size: 14.4px;
-  }
   /****info******/
   .info-section .circle-info { 
     margin: 0 0 20px 20px;
@@ -670,31 +702,5 @@ footer .footer-column b {
     text-align: center;
   }
 }
-
-
-/* Filters Cuando sea menor a 550 px */
- @media (max-width: 550px) {
-  .filters-section {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .filter-buttoms-section { 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .filter-button {
-    justify-content: center;
-    flex: 0 0 48%;
-    box-sizing: border-box
-  }
-
-  .filter-button img {
-    margin-right: 8px;
-  }
-
-} 
 
 
