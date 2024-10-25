@@ -1,8 +1,7 @@
 /****** General ***********/
-
-* {
-  
+* {  
     font-family: "Raleway", sans-serif;
+    font-size: 14px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,9 +14,44 @@ body {
   margin-bottom: 0;
 }
 
+/****** Navigation ***********/
+header img {
+  min-width: 100px;
+  width: 8%;
+  margin-left: 50px;
+}
 
-/****** Seach ***********/
-.search-bar{
+header {
+  display: flex;
+  justify-content: space-between; 
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+header nav{
+  margin-top: 15px;
+}
+header ul {
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+header ul li {
+  margin-right: 40px;
+}
+
+header .border-blue{
+  padding: 36px;
+}
+
+header .border-blue:hover{
+  border-top: solid 3px #0065fc;
+  color: #0065fc;
+  padding: 36px;
+}
+
+/****** Search ***********/
+.search-bar {
     margin-left: 35px;
   }
   
@@ -66,12 +100,12 @@ body {
     color: transparent;
   }
   
-  h1{
+  h1 {
       margin-top: 25px;
       margin-bottom: 10px;
   }
   
-  .search-bar p{
+  .search-bar p {
     margin-bottom: 20px; 
     color: rgb(78, 77, 77);
   }
@@ -126,14 +160,13 @@ body {
 }
 
 
-
 /****** Acomodation ***********/
 Main {
     display: flex;
     margin-top: 30px;
     margin-left: 30px;
   }
-  .accommodation-section{
+  .accommodation-section {
     background: #F2F2F2;
     width: 65%;
     height: 650px;
@@ -143,7 +176,7 @@ Main {
   .accommodation-section h2{
     margin: 40px 0 40px 20px;
   }
-  .bloc1{
+  .bloc1 {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -197,7 +230,7 @@ Main {
     font-size: 113%;
   }
   
-  /****** Popular *******/
+/****** Popular *******/
   .popular-section {
     background: #F2F2F2;
     width: 30%;
@@ -253,7 +286,6 @@ Main {
     font-size: 80%;
   }
 
-
 /****** Activity ***********/
 .activity-section {
     display: flex;
@@ -270,8 +302,7 @@ Main {
     height: 398px;
     border-radius: 15px 15px 0 0;
     max-width: 100%;
-  }
-  
+  } 
 
   .things-to-do-container {
     display: flex;
@@ -284,54 +315,16 @@ Main {
     align-items: stretch;
   }
 
-  /*TODO: revisa */
   .things-to-do-container .border-picture {
     box-shadow: 0px 3px 15px 0px #0000001A;  
   }  
 
 
-  
-/* navigation */
-header img {
-    min-width: 100px;
-    width: 8%;
-    margin-left: 50px;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between; 
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
-  
-  header nav{
-    margin-top: 15px;
-  }
-  header ul {
-    display: flex; 
-    flex-wrap: wrap;
-  }
-  
-  header ul li {
-    margin-right: 40px;
-  }
-  
-  header .border-blue{
-    padding: 36px;
-  }
-  
-  header .border-blue:hover{
-    border-top: solid 3px #0065fc;
-    color: #0065fc;
-    padding: 36px;
-  }
-
-/* info */
-.info-section{
+/****** Info ***********/
+.info-section {
     margin-left: 5px;
   }
-  .info{
+  .info {
     display: flex;
     align-items: center;
     margin-top: 30px;
@@ -343,7 +336,7 @@ header img {
     font-weight: 300;
     color: rgb(59, 59, 59);
   }
-  
+
   .info-section .circle-info{
     border: #F2F2F2 solid 2px;
     border-radius: 50%;
@@ -361,15 +354,13 @@ header img {
     
   }
 
-a {
-  color: black;
-}
+  a {
+    color: black;
+  }
 
-h2 {
-  font-size: 131%;
-}
-
-
+  h2 {
+    font-size: 131%;
+  }
 
 /****** Footer ***********/
 footer {
@@ -397,10 +388,10 @@ footer .footer-column b {
 }
 
 
+/* ************Responsive section *************** */
 
-/* ************Responsive section ***************/
 @media screen and (max-width: 992px){
-  *{
+  * {
     box-sizing: content-box;
   }
 
@@ -415,7 +406,7 @@ footer .footer-column b {
     margin: auto;
     padding-left: 40px;
   }
-  header ul{
+  header ul {
     justify-content: space-around;
     margin-top: 30px;
   }
@@ -588,14 +579,6 @@ footer .footer-column b {
 }
 
 @media screen and (max-width: 441px){
-
-  /***** navigation bar*****/
-  header ul{
-    flex-wrap: nowrap;
-  }
-  header ul li{
-    margin-right: 10px;
-  }
 
   /***** search bar*****/
   .search-bar h1{
