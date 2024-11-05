@@ -9,12 +9,16 @@
   font-size: 14px;
 }
 
+body {
+  padding: 15px;
+}
+
 /****** Navigation ***********/
 header {
   display: block;
   border-bottom: 3px solid #f2f2f2;
-  margin-top: 55px;
-  margin-bottom: 25px;
+  margin: 30px 0;
+  /* margin-bottom: 30px; */
   padding-bottom: 20px;
   border-bottom: none; 
 }
@@ -22,24 +26,36 @@ header {
 header img {
   display: block;
   margin: auto;
-  padding-left: 40px;
+  /* padding-left: 40px; TODO: revisar en los media query */
   min-width: 80px;
-  width: 8%;
+  width: 60px;  /* Revisar como esta en las media query */
 }
 
 header nav {
+  margin: -15px;
   margin-top: 15px;
 }
 
 header ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  /* flex-wrap: wrap;
+  justify-content: space-around; */
   margin-top: 30px;
 }
 
 header ul li {
-  margin-right: 0;
+  /* margin-right: 0; */
+  display: flex;
+  justify-content: center;
+  flex: 1;
+
+}
+
+header ul li .accommodation {
+  color: #0065fc;
+  border-bottom: 2px solid #0065fc;
+  width: 100%;
+  text-align: center;
 }
 
 header ul li a {
@@ -51,16 +67,16 @@ header .border-blue {
 }
 
 header .border-blue:hover {
-  border-bottom: #0065fc solid 3px;
-  padding-bottom: 20px;
+  /* border-bottom: #0065fc solid 3px; */
+  /* padding-bottom: 20px; */
   border-top: none;
   color: #0065fc;
 }
 
 /****** Search ***********/
-.search-bar {
+/* .search-bar {
     margin: 25px;
-  }
+  } */
   
   .search-bar h2 {
     font-size: 131%;
@@ -118,7 +134,7 @@ header .border-blue:hover {
 
 /****** Filter ***********/
 .filters-section {
-  margin: 15px;
+  /* margin: 15px; */
   display: flex;
   flex-direction: column;
 }
@@ -176,9 +192,9 @@ header .border-blue:hover {
   background-color: #e0efff;
 }
 /****** Info ***********/
-.info-section {
+/* .info-section {
   margin-left: 5px;
-}
+} */
 .info {
   display: flex;
   align-items: center;
