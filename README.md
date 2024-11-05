@@ -19,3 +19,11 @@ On the mobile no margin! thats your base remember
 So I dont have margins in the individuals components, cause the margin is already in the body. 
 
 Work on the versions of the figma
+
+
+## Git issues
+
+```bash
+ssh -T git@github.com
+cat ~/.ssh/id_ed25519.pub
+```

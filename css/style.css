@@ -18,7 +18,6 @@ header {
   display: block;
   border-bottom: 3px solid #f2f2f2;
   margin: 30px 0;
-  /* margin-bottom: 30px; */
   padding-bottom: 20px;
   border-bottom: none; 
 }
@@ -38,13 +37,10 @@ header nav {
 
 header ul {
   display: flex;
-  /* flex-wrap: wrap;
-  justify-content: space-around; */
   margin-top: 30px;
 }
 
 header ul li {
-  /* margin-right: 0; */
   display: flex;
   justify-content: center;
   flex: 1;
@@ -67,22 +63,17 @@ header .border-blue {
 }
 
 header .border-blue:hover {
-  /* border-bottom: #0065fc solid 3px; */
-  /* padding-bottom: 20px; */
   border-top: none;
   color: #0065fc;
 }
 
-/****** Search ***********/
-/* .search-bar {
-    margin: 25px;
-  } */
-  
+/****** Search ***********/  
   .search-bar h2 {
-    font-size: 131%;
+    font-size: 22px;
   }
 
   .search-bar p {
+    font-size: 16px;
     margin-top: 10px;
     margin-bottom: 20px; 
     color: rgb(78, 77, 77);
@@ -134,7 +125,6 @@ header .border-blue:hover {
 
 /****** Filter ***********/
 .filters-section {
-  /* margin: 15px; */
   display: flex;
   flex-direction: column;
 }
@@ -191,10 +181,6 @@ header .border-blue:hover {
 .filter-button.selected {
   background-color: #e0efff;
 }
-/****** Info ***********/
-/* .info-section {
-  margin-left: 5px;
-} */
 .info {
   display: flex;
   align-items: center;
