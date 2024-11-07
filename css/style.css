@@ -378,28 +378,19 @@ Main {
   
   .activity-section img {
     object-fit: cover;
-    /* width: 297px; */
-    /* height: 398px; */
     border-radius: 15px 15px 0 0;
     max-width: 100%;
   } 
 
   .things-to-do-container {
-    /* display: flex;
-    flex-direction: column; */
-    /* justify-content:space-around ; */
-    /* gap: 0px; */
     width: 100%;
-    /* box-sizing: border-box; */
     background-color: transparent;
-    /* align-items: stretch; */
   }
 
   .things-to-do-container .border-picture {
     box-shadow: 0px 3px 15px 0px #0000001A;  
     margin-bottom: 30px;
-  }  
-
+  }
 
 /****** Footer ***********/
 footer {
@@ -539,7 +530,7 @@ footer .footer-column b {
   }
   
   /********** accommodation-section***********/
-  .accommodation-section .bloc1{
+  .accommodation-section .bloc1 {
     flex-direction: column;
     width: 100%;
   }
@@ -587,28 +578,21 @@ footer .footer-column b {
     display: flex;
     justify-content: space-between;
   }
+  
   .popular-section .border-popular{
     width: auto;
-    /* padding: 2%; */
     margin-left: 0;
     margin-bottom: 15px;
   }
+  
   .popular-section img {
     height: 140px;
     width: 250px;
     padding: 1% 10px;
   }
+
   .popular-section .text-picture{
     margin-left: 30px;
-  }
-  .popular-section h4{
-    font-size: 119%;
-  }
-  .popular-section p{
-    font-size: 100%;
-  }
-  .popular-section .star{
-    font-size: 100%;
   }
 
   /*******activity-section*******/
