@@ -27,3 +27,23 @@ Work on the versions of the figma
 ssh -T git@github.com
 cat ~/.ssh/id_ed25519.pub
 ```
+
+
+
+## Dudas (8/11/2024)
+
+No estoy segura de si es la correcta forma
+```css
+  .search-bar .map {
+    display: flex;
+    width: 100%; 
+    justify-content: center;
+  }
+```
+
+Para la separacion del texto:
+```css
+  .popular-section .title-popular {
+    margin: 15px 0 0 15px;  /* margin-top: 15px; margin-left: 15px; */
+  }
+``` 
