@@ -47,3 +47,56 @@ Para la separacion del texto:
     margin: 15px 0 0 15px;  /* margin-top: 15px; margin-left: 15px; */
   }
 ``` 
+
+
+Mover las estrellas al final
+```css
+  .popular-section .title-popular {
+    margin: 15px 0 0 15px; 
+  }
+  
+  .popular-section .star {
+    margin-top: 65px;
+  }
+```
+Considerando hacerlo flex y tratar de mover los items
+
+
+
+
+Quitar esta media query y pasarla a mi mobile first
+```css
+  .accommodation-section .bloc1 {
+    flex-direction: column;
+    width: 100%;
+  }
+  .accommodation-section span{
+    margin-left: 10px;
+  }
+  .accommodation-section{
+    flex: none;
+    width: 90%;
+    margin-right: 0%;
+    padding: 5%;
+    height: auto;
+    background-color: white
+  }
+  .accommodation-section h2 {
+    margin: 25px 0;
+  }
+  .accommodation-section .border-picture{
+    width: 95%;
+    margin-bottom: 20px;
+  }
+  .accommodation-section img{
+    object-fit: cover;
+    height: 180px;
+  }
+  .accommodation-section .border-popular{
+    width: 100%;
+  }
+  
+  .accommodation-section .bloc2 {
+    justify-content: start;
+}
+```
