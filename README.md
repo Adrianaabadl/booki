@@ -40,6 +40,7 @@ No estoy segura de si es la correcta forma
     justify-content: center;
   }
 ```
+Para el desktop, max with y anadir la sombra/shadow
 
 Para la separacion del texto:
 ```css
