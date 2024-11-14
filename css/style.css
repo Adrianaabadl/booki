@@ -297,11 +297,12 @@ Main {
     color: #d6d1d1;
   }
   
-  .accommodation-section span{
+  .accommodation-section span {
     margin-left: 40px;
     font-weight: 600;
     cursor: pointer;
     font-size: 113%;
+    margin-left: -5px;
   }
   
 /****** Popular *******/
