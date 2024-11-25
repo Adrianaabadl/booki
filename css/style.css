@@ -1,112 +1,167 @@
 /****** General ***********/
-header img {
-  width: 100px;
-  height: auto;
-  margin: 15px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
+  box-sizing: content-box;
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
   font-family: "Raleway", sans-serif;
-}
-
-:root {
-  --main-color: #0065fc;
-  --main-bg-color: #f2f2f2;
-  --filter-bg-color: #deebff;
-}
-
-.fa-solid,
-.fa-regular {
-  color: var(--main-color);
+  font-size: 14px;
 }
 
 body {
+  padding: 15px;
+}
+
+/****** Navigation ***********/
+header {
+  display: block;
+  border-bottom: 3px solid #f2f2f2;
+  margin: 30px 0;
+  padding-bottom: 20px;
+  border-bottom: none; 
+}
+
+header img {
+  display: block;
+  margin: auto;
+  /* padding-left: 40px; TODO: revisar en los media query */
+  min-width: 80px;
+  width: 60px;  /* Revisar como esta en las media query */
+}
+
+header nav {
+  margin: -15px;
+  margin-top: 15px;
+}
+
+header ul {
+  display: flex;
+  margin-top: 30px;
+}
+
+header ul li {
   display: flex;
   justify-content: center;
+  flex: 1;
 }
 
-.main-container {
+header ul li .accommodation {
+  color: #0065fc;
+  border-bottom: 2px solid #0065fc;
   width: 100%;
-  padding: 0 50px;
-  box-sizing: border-box;
+  text-align: center;
 }
 
-.section-title {
-  margin: 0;
-  font-size: 22px;
+header ul li .activity {
+  border-bottom: 2px solid #F2F2F2;
+  width: 100%;
+  text-align: center;
 }
 
-.card {
-  background-color: white;
-  border-radius: 20px;
-  padding: 5px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+header ul li a {
+  color: black;
+  font-size: 19px;
 }
 
-.card img {
-  object-fit: cover;
+header .border-blue {
+  padding: 20px;
 }
 
-.card-title {
-  font-size: 16px;
+header .border-blue:hover {
+  border-top: none;
+  color: #0065fc;
 }
 
-.euro {
-  font-weight: 700;
-}
+/****** Search ***********/  
+  .search-bar h2 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25.83px;
+  }
 
-.neutralStar {
-  color: var(--main-bg-color);
-}
+  .search-bar p {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px; 
+    color: rgb(78, 77, 77);
+  }
 
-/****** Search Container ***********/
-.location {
+  .search-bar .map {
+    display: flex;
+    width: 100%; 
+    justify-content: center;
+  }
+  
+  .search-bar .fa-map-marker-alt {
+    display: flex;
+    background-color: #F2F2F2;
+    border-radius: 10px 0 0 10px;
+    max-height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px
+  }
+
+  .search-bar input {
+    height: 50px;
+    width: 250px;
+    border: #f2f2f2 1px solid;
+    font-weight: 700;
+    font-size: 18px;
+    width: 80%;
+  }
+  .search-bar input::placeholder {
+    color: black;
+    padding-left: 30px; 
+  }
+
+  .search-bar .search {
+    width: 50px;
+    display: none;
+  }
+
+  .search-bar .fa-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background: #0065fc;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    margin-left: -10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  }
+
+/****** Filter ***********/
+.filters-section {
   display: flex;
-  align-items: center;
-  padding: 10px;
-  background-color: #e8e8e8;
-  border-radius: 20px 0 0 20px;
+  flex-direction: column;
 }
 
-.location-icon {
-  width: 24px;
-  height: 24px;
-  background-image: url("https://cdn-icons-png.flaticon.com/512/447/447031.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: 10px;
-}
-
-.search-container {
+.filters {
   display: flex;
-  align-items: center; /* Alinea verticalmente los elementos dentro del contenedor */
-  margin-bottom: 20px; /* Espacio debajo del contenedor de búsqueda */
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.search-container input[type="search"] {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-right: 10px; /* Espacio entre el campo de búsqueda y el botón */
+.filters h3 {
+  margin: 30px 5px 5px 10px;
+  font-size: 18px;
+  width: auto;
   height: auto;
 }
 
-.search-container button {
-  background-color: #0065fc;
-  color: white;
-  border: none;
-  padding: 18px 20px;
-  font-size: 18px;
-  border-radius: 0 20px 20px 0;
-  cursor: pointer;
-}
-
-/****** Filters ***********/
-.filters {
+.filter-buttoms-section {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 20px;
 }
 
 .filter-button {
@@ -119,416 +174,390 @@ body {
   text-decoration: none;
   color: #000;
   font-weight: bold;
-  transition: background-color 0.3s;
+  justify-content: center;
+  flex: 0 0 48%;
+  box-sizing: border-box;
 }
 
 .filter-button i {
-  margin-right: 10px; /* Ajusta el margen derecho del icono */
-  font-size: 24px;
-}
-
-.filter-icon i {
-  margin-right: 20px; /* Ajusta el margen derecho del icono */
-  font-size: 10px;
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 .filter-button img {
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .filter-button:hover {
   background-color: #f0f0f0;
 }
 
-.selected {
+.filter-button.selected {
   background-color: #e0efff;
 }
-
-/* Media Queries for Responsive Design */
-@media (max-width: 550px) {
-  .filters {
-    flex-direction: column; /* Los filtros se alinearán en una sola columna */
-  }
-
-  .filter-button {
-    width: 90%; /* Los botones ocuparán todo el ancho disponible */
-    justify-content: center; /* Centra el contenido dentro de los botones */
-  }
-
-  .filter-button img {
-    margin-right: 8px; /* Reduce el margen en pantallas pequeñas */
-  }
-}
-
-/****** Accommodation And Popular ***********/
-.accommodation-and-popular {
+.info {
   display: flex;
-  justify-content: space-between;
-  gap: 30px; /* Espacio entre las dos secciones */
-  margin-top: 33px;
-  width: calc(
-    100% - 50px
-  ); /* Ajusta el ancho total, restando el padding de .main-container */
-}
-
-.accommodation-and-popular section {
-  background-color: var(--main-bg-color);
-  border-radius: 20px;
-  padding: 30px;
-  box-sizing: border-box;
-  width: 80%; /* Ajuste de ancho para que quepan lado a lado */
-  height: 950px; /* Altura fija */
-  height: auto;
-}
-
-/****** Accommodation ***********/
-.accommodation {
-  margin-bottom: 30px;
-}
-
-/****** Popular ***********/
-.popular-title {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
 }
 
-.popular-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px; /* Espacio entre tarjetas */
-  margin-top: 33px;
-  width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho del contenedor principal */
-  box-sizing: border-box;
-}
-
-.popular-cards .card {
-  display: flex;
-  flex-direction: column;
-  width: calc(
-    33.33% - 30px
-  ); /* Ajusta el ancho de cada tarjeta teniendo en cuenta el espacio entre ellas */
-  background-color: white;
-  border-radius: 20px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  box-sizing: border-box;
-}
-
-.popular-cards img {
-  width: 100%;
-  height: 146px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  object-fit: cover;
-}
-
-.popular-cards .card-content {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-
-.popular-cards .card-title {
-  margin-top: 10px;
-  margin-bottom: 4px;
-}
-
-.popular-cards .card-subtitle {
-  margin: 0;
-}
-
-.popular-cards .card-rating {
-  margin-bottom: 5px;
-}
-
-/* Ajusta el ancho máximo y centra el contenido */
-.popular {
-  max-width: 600px; /* Aumenta el ancho máximo */
-  margin: 0 auto; /* Centra la sección horizontalmente */
-  padding: 0 20px; /* Espacio a los lados */
-}
-
-.popular-accommodation {
-  display: flex;
-  flex-direction: column; /* Alinea las tarjetas en una columna */
-  gap: 30px; /* Espacio entre tarjetas */
-  margin-top: 33px;
-  align-items: center; /* Centra las tarjetas horizontalmente */
-  max-width: 60%; /* Aumenta el ancho máximo para ocupar más espacio */
-  margin-left: auto; /* Centra el contenedor horizontalmente */
-  margin-right: auto; /* Centra el contenedor horizontalmente */
-  padding: 0 10px; /* Aumenta el padding para dar más espacio a los lados */
-}
-
-/* Ajusta el tamaño de las tarjetas */
-.popular-accommodation .card {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border-radius: 20px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  width: 250%; /* Asegura que cada tarjeta ocupe el 100% del ancho del contenedor */
-  max-width: 350px; /* Aumenta el ancho máximo de las tarjetas */
-  box-sizing: border-box;
-  margin-right: auto;
-  margin-left: -80px;
-}
-
-/* Ajusta el tamaño de las imágenes en las tarjetas */
-.popular-accommodation img {
-  width: 100%;
-  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
-  max-height: 150px; /* Limita la altura máxima de la imagen */
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  object-fit: cover;
-}
-
-.things-to-do-container .card img {
-  min-width: 200px;
-  width: 100%; /* Para que las imágenes ocupen el ancho completo de la tarjeta */
-  height: auto; /* Mantiene la proporción de la imagen */
-}
-
-/* Ajusta el padding y el tamaño del contenido dentro de las tarjetas */
-.popular-accommodation .card-content {
-  padding: 10px; /* Reduce el padding interior de las tarjetas */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-
-/* Ajusta el margen de los elementos de texto dentro de las tarjetas */
-.popular-accommodation .card-title {
-  margin-top: 10px;
-  margin-bottom: 4px;
-}
-
-.popular-accommodation .card-subtitle {
-  margin: 0;
-}
-
-.popular-accommodation .card-rating {
-  margin-bottom: 5px;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .popular-accommodation {
-    max-width: 90%; /* Ajusta el ancho máximo del contenedor */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    padding: 0; /* Ajusta el padding si es necesario */
-    display: flex;
-    flex-direction: column; /* Alinea las tarjetas en una columna */
-    align-items: center; /* Centra las tarjetas horizontalmente */
-    gap: 20px; /* Espacio entre tarjetas */
-    margin-left: 10%; /* Ajusta este valor para mover el contenedor más a la derecha */
-    justify-content: center;
-  }
-
-  .popular-accommodation .card {
-    width: 90%; /* Asegura que cada tarjeta ocupe el 100% del ancho del contenedor */
-    max-width: 350px; /* Aumenta el ancho máximo de las tarjetas */
-    margin: 0 auto; /* Centra las tarjetas dentro del contenedor */
-  }
-}
-
-@media (max-width: 480px) {
-  .popular-accommodation {
-    max-width: 95%; /* Ajusta el ancho máximo del contenedor */
-    display: flex;
-    flex-direction: column; /* Alinea las tarjetas en una columna */
-    align-items: center; /* Centra las tarjetas horizontalmente */
-    gap: 30px; /* Espacio entre tarjetas */
-    padding: 0; /* Ajusta el padding si es necesario */
-    margin-left: 5%; /* Ajusta este valor para mover el contenedor más a la derecha */
-  }
-
-  .popular-accommodation .card {
-    width: 100%; /* Asegura que cada tarjeta ocupe el 100% del ancho del contenedor */
-    max-width: 350px; /* Aumenta el ancho máximo de las tarjetas */
-    margin: 0 auto; /* Centra las tarjetas dentro del contenedor */
-  }
-}
-
-@media (max-width: 768px) {
-  header img {
-    width: 80px; /* Reduce el tamaño del logo en pantallas más pequeñas */
-  }
-
-  .main-container {
-    padding: 20px; /* Reduce el padding para pantallas más pequeñas */
-  }
-
-  .accommodation-and-popular {
-    flex-direction: column;
-    gap: 20px; /* Espacio entre secciones */
-  }
-
-  .accommodation-and-popular section {
-    width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
-    height: auto; /* Ajusta la altura para pantallas más pequeñas */
-  }
-
-  .popular-cards .card {
-    width: calc(100% - 30px); /* Una tarjeta por fila */
-  }
-
-  .popular-accommodation {
-    max-width: 90%; /* Ajusta el ancho máximo del contenedor en pantallas más pequeñas */
-    display: flex;
-    flex-direction: column; /* Alinea las tarjetas en una columna */
-    align-items: center; /* Centra las tarjetas horizontalmente */
-    gap: 30px; /* Espacio entre tarjetas */
-  }
-
-  .popular-accommodation .card {
-    width: 100%; /* Asegura que cada tarjeta ocupe el 100% del ancho del contenedor */
-    max-width: 350px; /* Aumenta el ancho máximo de las tarjetas */
-    margin: 0 auto; /* Centra las tarjetas dentro del contenedor */
-  }
-}
-
-@media (max-width: 480px) {
-  header img {
-    width: 60px; /* Reduce aún más el tamaño del logo en pantallas muy pequeñas */
-  }
-
-  .popular-title {
-    font-size: 18px; /* Ajusta el tamaño del título para pantallas pequeñas */
-  }
-
-  .section-title {
-    font-size: 18px; /* Ajusta el tamaño del título para pantallas pequeñas */
-  }
-
-  .popular-cards .card {
-    width: calc(100% - 30px); /* Una tarjeta por fila con más margen */
-  }
-
-  .popular-accommodation {
-    max-width: 95%; /* Ajusta el ancho máximo del contenedor */
-    display: flex;
-    flex-direction: column; /* Alinea las tarjetas en una columna */
-    align-items: center; /* Centra las tarjetas horizontalmente */
-    gap: 30px; /* Espacio entre tarjetas */
-  }
-
-  .popular-accommodation .card {
-    width: 100%; /* Asegura que cada tarjeta ocupe el 100% del ancho del contenedor */
-    max-width: 350px; /* Aumenta el ancho máximo de las tarjetas */
-    margin: 0 auto; /* Centra las tarjetas dentro del contenedor */
-  }
-}
-
-/****** Things to Do ***********/
-.things-to-do {
-  padding: 20px;
-  background-color: transparent;
-}
-
-.things-to-do h3 {
-  text-align: left;
-  margin-bottom: 20px;
-  font-size: 24px;
-}
-
-.things-to-do-container {
-  display: flex;
-  flex-wrap: wrap; /* Permite que las tarjetas bajen a otra fila si no caben */
-  justify-content: space-between; /* Distribuye las tarjetas con espacio entre ellas */
-  width: 100%; /* Ocupa todo el ancho disponible */
-  box-sizing: border-box;
-  background-color: transparent;
-}
-
-.things-to-do .card {
-  border-radius: 20px;
-  padding: 5px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  flex: 1 1 calc(25% - 20px); /* Permite que cada tarjeta ocupe el mismo espacio y se ajusten 4 por fila */
-  margin: 10px 0; /* Espacio entre tarjetas, ajustado para trabajar con flex-wrap */
-  box-sizing: border-box; /* Incluye padding y border en el ancho total */
-  max-width: calc(
-    25% - 20px
-  ); /* Ajusta el ancho máximo para que las tarjetas se distribuyan en 4 por fila */
-}
-
-.things-to-do img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.things-to-do .container {
-  text-align: center;
-  padding: 10px;
-}
-
-.things-to-do .container p {
-  margin: 0;
+.info-section h2 {
+  margin-left: 10px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 300;
+  color: rgb(59, 59, 59);
+  margin: 5px;
 }
 
-/* Media Queries para pantallas más pequeñas */
-@media (max-width: 1200px) {
-  .things-to-do .card {
-    flex: 1 1 calc(33.333% - 20px); /* 3 tarjetas por fila */
-    max-width: calc(33.333% - 20px);
-  }
+.info-section .circle-info {
+  border: #F2F2F2 solid 2px;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  color: #0065fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
 }
 
-@media (max-width: 900px) {
-  .things-to-do .card {
-    flex: 1 1 calc(50% - 20px); /* 2 tarjetas por fila */
-    max-width: calc(50% - 20px);
-  }
+.info-section i {
+  font-size: 81%;
+  
 }
 
-@media (max-width: 600px) {
-  .things-to-do .card {
-    flex: 1 1 100%; /* 1 tarjeta por fila */
-    max-width: 100%;
-  }
+.info-section a {
+  color: black;
 }
+
+/****** Acomodation ***********/
+Main {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .accommodation-section {
+    background: #F2F2F2;
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    margin-right: 30px;
+    margin-right: 0%;
+    padding: 5%;
+    background-color: white
+  }
+  .accommodation-section h2 {
+    margin: 40px 0 20px 0px;
+    font-size: 22px;
+  }
+  .bloc1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+ 
+  .accommodation-section img {
+    object-fit: cover;
+    width: 97%;
+    height: 124px;
+    border-radius: 20px 25px 0 0;
+    padding-right: 10px;
+    margin: 10px 5px 0px;
+  }
+  
+  .accommodation-section .border-picture{
+    width: 335px;
+    height: auto;
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.062);
+    transition: 0.8s;
+    padding-bottom: 10px;
+  }
+  
+  .text-picture{
+    margin-left: 15px;
+    line-height: 25px;
+  }
+  
+  .accommodation-section .star{
+    font-size: 90%;
+  }
+  .bloc2{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .accommodation-section .colorblue{
+    color: #0065fc;
+  }
+  .accommodation-section .colorgrey{
+    color: #d6d1d1;
+  }
+  
+  .accommodation-section span {
+    margin-left: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 113%;
+    margin-left: -5px;
+  }
+  
+/****** Popular *******/
+  .popular-section {
+    background: #F2F2F2;
+    display: block;
+    width: 100%;
+    border-radius: 0;
+    margin-left: -5%; 
+    padding: 5% 5%;
+  }
+  
+  .popular-section .title-graph {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .popular-section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25.83px;
+  }
+
+  .fa-chart-line {
+    color: #0065fc;
+  }
+  
+  .fa-chart-line {
+    font-size: 25px;
+  }
+  
+  .popular-section .border-popular {
+    display: flex;
+    width: 335px;
+    height: 146px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: white;
+    margin-bottom: 15px;
+    padding: 2px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.062);
+    transition: 0.8s;
+    gap: 15px;
+  }
+  
+  .popular-section img {
+    object-fit: cover;
+    height: 146px;
+    width: 111.67px;
+    border-radius: 20px 0 0 20px;
+    border-top: 5px;
+    border-bottom: 5px;
+    border-left: 5px;
+  }
+  
+  .popular-section .title-popular {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .popular-section .colorblue {
+    color: #0065fc;
+    font-size: 80%;
+  }
+  .popular-section .colorgrey {
+    color: #d6d1d1;
+    font-size: 80%;
+  }
+
+/****** Activity ***********/
+  .activity-section {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+  
+  .activity-section h2 {
+    margin: 40px 0 40px 0px;
+    font-size: 22px;
+  }
+  
+  .activity-section img {
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    height: 210px;
+    width: 100%;
+  } 
+
+  .things-to-do-container {
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .things-to-do-container .border-picture {
+    box-shadow: 0px 3px 15px 0px #0000001A;  
+    margin-bottom: 30px;
+  }
 
 /****** Footer ***********/
 footer {
   display: flex;
-  justify-content: space-between; /* Alinea las columnas de forma equitativa */
+  justify-content: flex-start;
   padding: 20px;
   background-color: #f2f2f2;
   box-sizing: border-box;
-  width: 100%;
-  margin: 0; /* Centra el footer horizontalmente */
+  width: 150%;
+  margin: -15px;
+  text-align: start;
+  flex-direction: column
+}
+
+footer p b {
+  font-size: 18px;
 }
 
 footer p {
-  margin: 5px 0;
+  font-size: 16px;
+  margin: 15px 0;
+  padding-left: 5px;
 }
 
 footer .footer-column {
-  flex: 1; /* Cada columna ocupa el mismo espacio */
-  padding: 0 20px; /* Espacio interno a los lados */
+  flex: 1;
+  margin-bottom: 15px;
 }
 
-footer .footer-column b {
-  display: block;
-  margin-bottom: 10px;
+
+/* ************Responsive section *************** */
+@media (min-width: 550px) {
+  .filters-section {
+    margin: 0;
+  }
+  .filters {
+    flex-direction: row;
+  }
+
+  .filter-buttoms-section {
+    gap: 10px;
+  }
+
+  .filter-button {
+    justify-content: start;
+    flex: initial;
+  }
+
+  .filter-button i {
+    margin-right: 20px;
+    font-size: 24px;
+  }
+
+  .filters h3 {
+    margin: 10px 5px 5px 35px;
+    width: 54px;
+    height: 21px;
+  }
+  
+  /****info******/
+  .info-section .circle-info { 
+    margin: 0 0 0 20px;
+  }
+
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width: 768px) {
+* {  
+    box-sizing: border-box;
+  }
+  body {
+    margin: 25px;
+    margin-bottom: 0;
+  }
+ /* ************ navigation bar ***************/
+ header {
+  display: flex;
+  margin-top: 0;
+  padding-bottom: 0;
+  }
+
+ header img {
+    margin-left: 50px;
+    padding-left: 0;
+  }
+
+  header ul {
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+  header ul li {
+    margin-right: 80px;
+  }
+
+  header .border-blue {
+    padding: 0;
+  }
+  
+  header .accommodation {
+    padding: 5px;
+    color: none;
+  }
+
+  header .border-blue:hover {
+    border-bottom: none;
+    border-top: none;
+    color: none;
+    text-decoration: none;
+  }
+
+  /* ************ search ***************/
+   .search-bar .search {
+    border-radius: 0 15px 10px 0;
+    height: 50px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    background-color: #0065fc;
+    cursor: pointer;
+    margin-top: unset;
+  }
+  
+   .search-bar .fa-search {
+    color: transparent;
+    display: none;
+  }
+   
+}
+
+@media screen and (max-width: 992px){
+  /******* main **********/
+  main {
+    margin-left: 0;
+    flex-direction: column-reverse;
+  }
+}
+
+
+
+@media (min-width: 800px) {
   footer {
-    flex-direction: column; /* Las columnas se apilan verticalmente */
-    align-items: center; /* Centra las columnas en el medio */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
   footer .footer-column {
-    padding: 10px 0; /* Reduce el padding lateral en móviles */
-    text-align: center; /* Centra el texto dentro de cada columna */
+    padding: 10px 0;
+    text-align: center;
   }
 }
+
+
