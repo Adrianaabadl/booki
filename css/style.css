@@ -60,6 +60,23 @@ body {
 }
 
 /****** Search Container ***********/
+.location {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #e8e8e8;
+  border-radius: 20px 0 0 20px;
+}
+
+.location-icon {
+  width: 24px;
+  height: 24px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/447/447031.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
 .search-container {
   display: flex;
   align-items: center; /* Alinea verticalmente los elementos dentro del contenedor */
@@ -71,15 +88,76 @@ body {
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-right: 10px; /* Espacio entre el campo de búsqueda y el botón */
+  height: auto;
 }
 
 .search-container button {
-  padding: 10px 20px;
-  border: none;
-  background-color: var(--main-color);
+  background-color: #0065fc;
   color: white;
-  border-radius: 5px;
+  border: none;
+  padding: 18px 20px;
+  font-size: 18px;
+  border-radius: 0 20px 20px 0;
   cursor: pointer;
+}
+
+/****** Filters ***********/
+.filters {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: white;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.filter-button i {
+  margin-right: 10px; /* Ajusta el margen derecho del icono */
+  font-size: 24px;
+}
+
+.filter-icon i {
+  margin-right: 20px; /* Ajusta el margen derecho del icono */
+  font-size: 10px;
+}
+
+.filter-button img {
+  margin-right: 10px;
+}
+
+.filter-button:hover {
+  background-color: #f0f0f0;
+}
+
+.selected {
+  background-color: #e0efff;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 550px) {
+  .filters {
+    flex-direction: column; /* Los filtros se alinearán en una sola columna */
+  }
+
+  .filter-button {
+    width: 90%; /* Los botones ocuparán todo el ancho disponible */
+    justify-content: center; /* Centra el contenido dentro de los botones */
+  }
+
+  .filter-button img {
+    margin-right: 8px; /* Reduce el margen en pantallas pequeñas */
+  }
 }
 
 /****** Accommodation And Popular ***********/
@@ -98,8 +176,9 @@ body {
   border-radius: 20px;
   padding: 30px;
   box-sizing: border-box;
-  width: 70%; /* Ajuste de ancho para que quepan lado a lado */
+  width: 80%; /* Ajuste de ancho para que quepan lado a lado */
   height: 950px; /* Altura fija */
+  height: auto;
 }
 
 /****** Accommodation ***********/
@@ -130,7 +209,6 @@ body {
     33.33% - 30px
   ); /* Ajusta el ancho de cada tarjeta teniendo en cuenta el espacio entre ellas */
   background-color: white;
-  /* margin-left: 80px; */
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   box-sizing: border-box;
@@ -165,27 +243,23 @@ body {
   margin-bottom: 5px;
 }
 
+/* Ajusta el ancho máximo y centra el contenido */
 .popular {
-  max-width: 600px; /* Ajusta según el tamaño deseado */
+  max-width: 600px; /* Aumenta el ancho máximo */
   margin: 0 auto; /* Centra la sección horizontalmente */
-  margin-right: 20px;
-  padding: 0 20px; /* Opcional: Ajusta el padding si es necesario */
-}
-.popular {
-  padding: 0 20px; /* Ajusta el padding para reducir el espacio interno */
+  padding: 0 20px; /* Espacio a los lados */
 }
 
-/* Ajusta el ancho del contenedor de las tarjetas */
 .popular-accommodation {
   display: flex;
   flex-direction: column; /* Alinea las tarjetas en una columna */
   gap: 30px; /* Espacio entre tarjetas */
   margin-top: 33px;
   align-items: center; /* Centra las tarjetas horizontalmente */
-  max-width: 60%; /* Ajusta el ancho máximo del contenedor */
+  max-width: 60%; /* Aumenta el ancho máximo para ocupar más espacio */
   margin-left: auto; /* Centra el contenedor horizontalmente */
   margin-right: auto; /* Centra el contenedor horizontalmente */
-  padding: 0 10px; /* Reduce el padding interior del contenedor */
+  padding: 0 10px; /* Aumenta el padding para dar más espacio a los lados */
 }
 
 /* Ajusta el tamaño de las tarjetas */
@@ -195,9 +269,11 @@ body {
   background-color: white;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  width: 100%; /* Asegura que cada tarjeta ocupe el 100% del ancho del contenedor */
-  max-width: 300px; /* Reduce el ancho máximo de las tarjetas */
+  width: 250%; /* Asegura que cada tarjeta ocupe el 100% del ancho del contenedor */
+  max-width: 350px; /* Aumenta el ancho máximo de las tarjetas */
   box-sizing: border-box;
+  margin-right: auto;
+  margin-left: -80px;
 }
 
 /* Ajusta el tamaño de las imágenes en las tarjetas */
@@ -208,6 +284,12 @@ body {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   object-fit: cover;
+}
+
+.things-to-do-container .card img {
+  min-width: 200px;
+  width: 100%; /* Para que las imágenes ocupen el ancho completo de la tarjeta */
+  height: auto; /* Mantiene la proporción de la imagen */
 }
 
 /* Ajusta el padding y el tamaño del contenido dentro de las tarjetas */
@@ -234,19 +316,41 @@ body {
 }
 
 /* Media Queries */
-@media (max-width: 1024px) {
-  .accommodation-and-popular {
-    flex-direction: column;
-    gap: 20px; /* Espacio entre secciones */
+@media (max-width: 768px) {
+  .popular-accommodation {
+    max-width: 90%; /* Ajusta el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 0; /* Ajusta el padding si es necesario */
+    display: flex;
+    flex-direction: column; /* Alinea las tarjetas en una columna */
+    align-items: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espacio entre tarjetas */
+    margin-left: 10%; /* Ajusta este valor para mover el contenedor más a la derecha */
+    justify-content: center;
   }
 
-  .accommodation-and-popular section {
-    width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
-    height: auto; /* Ajusta la altura para pantallas más pequeñas */
+  .popular-accommodation .card {
+    width: 90%; /* Asegura que cada tarjeta ocupe el 100% del ancho del contenedor */
+    max-width: 350px; /* Aumenta el ancho máximo de las tarjetas */
+    margin: 0 auto; /* Centra las tarjetas dentro del contenedor */
+  }
+}
+
+@media (max-width: 480px) {
+  .popular-accommodation {
+    max-width: 95%; /* Ajusta el ancho máximo del contenedor */
+    display: flex;
+    flex-direction: column; /* Alinea las tarjetas en una columna */
+    align-items: center; /* Centra las tarjetas horizontalmente */
+    gap: 30px; /* Espacio entre tarjetas */
+    padding: 0; /* Ajusta el padding si es necesario */
+    margin-left: 5%; /* Ajusta este valor para mover el contenedor más a la derecha */
   }
 
-  .popular-cards .card {
-    width: calc(50% - 15px); /* Dos tarjetas por fila */
+  .popular-accommodation .card {
+    width: 100%; /* Asegura que cada tarjeta ocupe el 100% del ancho del contenedor */
+    max-width: 350px; /* Aumenta el ancho máximo de las tarjetas */
+    margin: 0 auto; /* Centra las tarjetas dentro del contenedor */
   }
 }
 
@@ -256,7 +360,7 @@ body {
   }
 
   .main-container {
-    padding: 0 20px; /* Reduce el padding para pantallas más pequeñas */
+    padding: 20px; /* Reduce el padding para pantallas más pequeñas */
   }
 
   .accommodation-and-popular {
@@ -265,7 +369,7 @@ body {
   }
 
   .accommodation-and-popular section {
-    width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
+    width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
     height: auto; /* Ajusta la altura para pantallas más pequeñas */
   }
 
@@ -275,6 +379,16 @@ body {
 
   .popular-accommodation {
     max-width: 90%; /* Ajusta el ancho máximo del contenedor en pantallas más pequeñas */
+    display: flex;
+    flex-direction: column; /* Alinea las tarjetas en una columna */
+    align-items: center; /* Centra las tarjetas horizontalmente */
+    gap: 30px; /* Espacio entre tarjetas */
+  }
+
+  .popular-accommodation .card {
+    width: 100%; /* Asegura que cada tarjeta ocupe el 100% del ancho del contenedor */
+    max-width: 350px; /* Aumenta el ancho máximo de las tarjetas */
+    margin: 0 auto; /* Centra las tarjetas dentro del contenedor */
   }
 }
 
@@ -294,29 +408,53 @@ body {
   .popular-cards .card {
     width: calc(100% - 30px); /* Una tarjeta por fila con más margen */
   }
+
+  .popular-accommodation {
+    max-width: 95%; /* Ajusta el ancho máximo del contenedor */
+    display: flex;
+    flex-direction: column; /* Alinea las tarjetas en una columna */
+    align-items: center; /* Centra las tarjetas horizontalmente */
+    gap: 30px; /* Espacio entre tarjetas */
+  }
+
+  .popular-accommodation .card {
+    width: 100%; /* Asegura que cada tarjeta ocupe el 100% del ancho del contenedor */
+    max-width: 350px; /* Aumenta el ancho máximo de las tarjetas */
+    margin: 0 auto; /* Centra las tarjetas dentro del contenedor */
+  }
 }
 
 /****** Things to Do ***********/
+.things-to-do {
+  padding: 20px;
+  background-color: transparent;
+}
+
+.things-to-do h3 {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
 
 .things-to-do-container {
   display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas bajen a otra fila si no caben */
   justify-content: space-between; /* Distribuye las tarjetas con espacio entre ellas */
   width: 100%; /* Ocupa todo el ancho disponible */
-  overflow-x: auto; /* Permite desplazamiento horizontal si las tarjetas no caben en la pantalla */
   box-sizing: border-box;
+  background-color: transparent;
 }
 
 .things-to-do .card {
-  background-color: white;
   border-radius: 20px;
   padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  flex: 1; /* Permite que cada tarjeta ocupe el mismo espacio */
-  margin: 0 20px; /* Espacio horizontal entre tarjetas */
+  flex: 1 1 calc(25% - 20px); /* Permite que cada tarjeta ocupe el mismo espacio y se ajusten 4 por fila */
+  margin: 10px 0; /* Espacio entre tarjetas, ajustado para trabajar con flex-wrap */
   box-sizing: border-box; /* Incluye padding y border en el ancho total */
   max-width: calc(
     25% - 20px
-  ); /* Ajusta el ancho máximo para que las tarjetas se distribuyan en 4 por fila, restando el margen */
+  ); /* Ajusta el ancho máximo para que las tarjetas se distribuyan en 4 por fila */
 }
 
 .things-to-do img {
@@ -325,9 +463,40 @@ body {
   object-fit: cover;
 }
 
-/****** FOoter ***********/
+.things-to-do .container {
+  text-align: center;
+  padding: 10px;
+}
 
-/* Estilos para el footer */
+.things-to-do .container p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 1200px) {
+  .things-to-do .card {
+    flex: 1 1 calc(33.333% - 20px); /* 3 tarjetas por fila */
+    max-width: calc(33.333% - 20px);
+  }
+}
+
+@media (max-width: 900px) {
+  .things-to-do .card {
+    flex: 1 1 calc(50% - 20px); /* 2 tarjetas por fila */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .things-to-do .card {
+    flex: 1 1 100%; /* 1 tarjeta por fila */
+    max-width: 100%;
+  }
+}
+
+/****** Footer ***********/
 footer {
   display: flex;
   justify-content: space-between; /* Alinea las columnas de forma equitativa */
@@ -350,4 +519,16 @@ footer .footer-column {
 footer .footer-column b {
   display: block;
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column; /* Las columnas se apilan verticalmente */
+    align-items: center; /* Centra las columnas en el medio */
+  }
+
+  footer .footer-column {
+    padding: 10px 0; /* Reduce el padding lateral en móviles */
+    text-align: center; /* Centra el texto dentro de cada columna */
+  }
 }
