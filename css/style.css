@@ -276,7 +276,7 @@ Main {
     padding-bottom: 10px;
   }
   
-  .text-picture{
+  .accommodation-section .text-picture {
     margin-left: 15px;
     line-height: 25px;
   }
@@ -381,17 +381,25 @@ Main {
   .activity-section {
     display: flex;
     flex-direction: column;
-    margin: 5px;
+    margin: 15px;
   }
   
   .activity-section h2 {
     margin: 40px 0 40px 0px;
     font-size: 22px;
   }
+
+  .activity-section .text-picture {
+    padding: 20px;
+  }
   
+  .activity-section .border-picture {
+    border-radius: 20px;
+  }
+
   .activity-section img {
     object-fit: cover;
-    border-radius: 15px 15px 0 0;
+    border-radius: 20px 20px 0 0;
     height: 210px;
     width: 100%;
   } 
@@ -416,7 +424,8 @@ footer {
   width: 150%;
   margin: -15px;
   text-align: start;
-  flex-direction: column
+  flex-direction: column;
+  margin-top: 40px;
 }
 
 footer p b {
