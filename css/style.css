@@ -420,7 +420,7 @@ footer {
   padding: 20px;
   background-color: #f2f2f2;
   box-sizing: border-box;
-  width: 150%;
+  /* width: 150%;  cause overflow*/ 
   margin: -15px;
   text-align: start;
   flex-direction: column;
