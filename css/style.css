@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-  box-sizing: content-box;
   list-style-type: none;
   text-decoration: none;
   margin: 0;
@@ -266,7 +265,7 @@ Main {
   }
   
   .accommodation-section .border-picture{
-    width: 335px;
+    width: 100%;
     height: auto;
     background: white;
     margin-bottom: 20px;
@@ -400,7 +399,7 @@ Main {
   .activity-section img {
     object-fit: cover;
     border-radius: 20px 20px 0 0;
-    height: 210px;
+    height: 141px;
     width: 100%;
   } 
 
