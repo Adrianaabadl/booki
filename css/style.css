@@ -140,6 +140,7 @@ header .border-blue:hover {
 .filters-section {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 .filters {
@@ -150,7 +151,7 @@ header .border-blue:hover {
 }
 
 .filters h3 {
-  margin: 30px 5px 5px 10px;
+  /* margin: 30px 5px 5px 10px; */
   font-size: 18px;
   width: auto;
   height: auto;
@@ -176,12 +177,13 @@ header .border-blue:hover {
   justify-content: center;
   flex: 0 0 48%;
   box-sizing: border-box;
+  gap: 10px
 }
 
-.filter-button i {
+/* .filter-button i {
   margin-right: 10px;
   font-size: 20px;
-}
+} */
 
 .filter-button img {
   margin-right: 8px;
@@ -446,11 +448,24 @@ footer .footer-column {
 
 /* ************Responsive section *************** */
 @media (min-width: 550px) {
-  .filters-section {
-    margin: 0;
+
+  .search-bar .map {
+    display: flex;
+    width: 100%;
+    max-width: 338px;
+    justify-content: flex-start;
   }
+/* 
+  .filters-section {
+    margin-top: 25px;
+  } */
+
   .filters {
-    flex-direction: row;
+    display: flex;
+    /* flex-direction: row; */
+    margin: 0;
+    justify-content: flex-start;
+    border-radius: solid 2px red;
   }
 
   .filter-buttoms-section {
@@ -462,13 +477,13 @@ footer .footer-column {
     flex: initial;
   }
 
-  .filter-button i {
+  /* .filter-button i {
     margin-right: 20px;
     font-size: 24px;
-  }
+  } */
 
   .filters h3 {
-    margin: 10px 5px 5px 35px;
+    /* margin: 10px 5px 5px 35px; */
     width: 54px;
     height: 21px;
   }
@@ -488,6 +503,20 @@ footer .footer-column {
     margin: 25px;
     margin-bottom: 0;
   }
+
+  header ul {
+    padding: 5px;
+  }
+
+  header ul li .accommodation {
+    color: #0065fc;
+    border-bottom: none;
+    border-top: 2px solid #0065fc;
+    width: 100%;
+    text-align: center;
+  }
+
+
  /* ************ navigation bar ***************/
  header {
   display: flex;
@@ -544,6 +573,10 @@ footer .footer-column {
     display: none;
   }
    
+}
+
+.info-section .circle-info { 
+  margin: 0;
 }
 
 @media screen and (max-width: 992px){
