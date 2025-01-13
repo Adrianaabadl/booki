@@ -237,7 +237,8 @@ header .border-blue:hover {
 Main {
     display: flex;
     margin-top: 30px;
-    margin-left: 30px;
+    margin-left: 0;
+    flex-direction: column-reverse;
   }
   .accommodation-section {
     background: #F2F2F2;
@@ -262,15 +263,16 @@ Main {
   .accommodation-section img {
     object-fit: cover;
     width: 100%;
+    max-width: 335px;
     height: 124px;
-    /* border: 1px solid red; */
     border-radius: 20px 25px 0 0;
     margin-left: -5px;
     margin-top: 5px;
   }
   
-  .accommodation-section .border-picture{
+  .accommodation-section .border-picture {
     width: 100%;
+    max-width: 335px;
     height: auto;
     background: white;
     margin-bottom: 20px;
@@ -479,13 +481,7 @@ footer .footer-column {
     flex: initial;
   }
 
-  /* .filter-button i {
-    margin-right: 20px;
-    font-size: 24px;
-  } */
-
   .filters h3 {
-    /* margin: 10px 5px 5px 35px; */
     width: 54px;
     height: 21px;
   }
@@ -582,18 +578,23 @@ footer .footer-column {
   margin: 0;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (min-width: 992px){
   /******* main **********/
-  main {
-    margin-left: 0;
-    flex-direction: column-reverse;
+
+   main {
+    flex-direction: column;
+    flex-wrap: wrap;
+   }
+   .accommodation-section  {
+    width: 968px;
+    background: #F2F2F2;
+   }
+
+  .accommodation-section .border-picture {
+    width: 268px;
   }
-}
 
-
-
-@media (min-width: 800px) {
-  footer {
+   footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
