@@ -52,12 +52,14 @@ header ul li .accommodation {
   border-bottom: 2px solid #0065fc;
   width: 100%;
   text-align: center;
+  padding: 10px;
 }
 
 header ul li .activity {
   border-bottom: 2px solid #F2F2F2;
   width: 100%;
   text-align: center;
+  padding: 12px;
 }
 
 header ul li a {
@@ -525,14 +527,15 @@ footer .footer-column {
   }
 
  header img {
-    margin-left: 50px;
+    margin-left: 0;
     padding-left: 0;
   }
 
   header ul {
-    justify-content: flex-end;
-    margin-top: 0;
+    display: flex;
+    margin-top: -60px;
   }
+
   header ul li {
     margin-right: 80px;
   }
