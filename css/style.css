@@ -257,7 +257,8 @@ Main {
   .bloc1 {
     display: flex;
     justify-content: space-around;
-    gap: 30px;
+    flex-wrap: wrap;
+    /* gap: 30px; */
   }
  
   .accommodation-section img {
@@ -290,10 +291,11 @@ Main {
   .accommodation-section .star{
     font-size: 90%;
   }
-  .bloc2{
+  .bloc2 {
     display: flex;
     justify-content: space-around;
-    gap: 30px
+    flex-wrap: wrap;
+    /* gap: 30px */
   }
   
   .accommodation-section .colorblue{
@@ -606,9 +608,18 @@ footer .footer-column {
     gap: 20px;
   }
 
+  .popular-section img {
+    width: 99%;
+    height: 99%;
+  }
+
   .accommodation-section img {
     width: 98%;
     margin-left: 3px;
+  }
+
+  .bloc1, .bloc2 {
+    gap: 30px;
   }
 
   .things-to-do-container {
