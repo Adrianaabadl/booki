@@ -234,7 +234,7 @@ header .border-blue:hover {
 }
 
 /****** Acomodation ***********/
-Main {
+main {
     display: flex;
     margin-top: 30px;
     margin-left: 0;
@@ -588,7 +588,7 @@ footer .footer-column {
    main {
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 30px;
    }
    .accommodation-section  {
     /* width: 968px; */
@@ -607,7 +607,7 @@ footer .footer-column {
 
   .popular-section-items {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: column; */
     gap: 20px;
   }
 
@@ -622,12 +622,20 @@ footer .footer-column {
   }
 
   .bloc1, .bloc2 {
-    gap: 20px;
+    flex-wrap: nowrap;
+    gap: 30px;
   }
 
   .things-to-do-container {
     flex-direction: row;
     gap: 30px;
+    justify-content: center;
+  }
+  
+  .activity-section img {
+    
+    height: 100%;
+    max-height: 200px;
   }
 
    footer {
@@ -642,4 +650,44 @@ footer .footer-column {
   }
 }
 
+@media screen and (min-width: 1800px) {
+  /******* main **********/
 
+  body {
+    margin-left: 280px;
+    margin-right: 280px;
+  }
+
+   main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+   }
+
+   .accommodation-section {
+    flex: 1;
+    padding: 30px;
+   }
+
+   .popular-section{
+    flex: 0;
+    padding: 30px;
+   }
+
+   .popular-section-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+   .activity-section {
+    width: 100%;
+    max-width: 1340px;
+    margin-left: 15px; /*  ASK  */ 
+   }
+
+   .activity-section img {
+    height: 100%;
+    max-height: 380px;
+   }
+  }
