@@ -695,7 +695,7 @@ footer .footer-column {
    .activity-section {
     width: 100%;
     max-width: 1340px;
-    margin-left: 15px; /*  ASK  */ 
+    margin-left: 15px;
    }
 
    .activity-section img {
@@ -703,7 +703,6 @@ footer .footer-column {
     max-height: 380px;
    }
   }
-  
   
   .rounded-background-container {
     background: #F2F2F2;
@@ -715,7 +714,5 @@ footer .footer-column {
     .rounded-background-container {
       border-radius: 0; 
     }
-  
-    
-    /* Other overrides here */
+
   }
