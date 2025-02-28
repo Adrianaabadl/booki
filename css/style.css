@@ -210,6 +210,7 @@ header .border-blue:hover {
   font-weight: 300;
   color: rgb(59, 59, 59);
   margin: 5px;
+  flex: 1
 }
 
 .info-section .circle-info {
@@ -318,9 +319,7 @@ main {
     background: #F2F2F2;
     display: block;
     width: 100%;
-    border-radius: 0;
-    margin-left: -5%; 
-    padding: 5% 5%;
+    margin-left: -5%;
   }
   
   .popular-section .title-graph {
@@ -346,7 +345,7 @@ main {
   
   .popular-section .border-popular {
     display: flex;
-    width: 335px;
+    /* width: 335px; */
     height: 146px;
     border: 2px solid white;
     border-radius: 20px;
@@ -456,7 +455,7 @@ footer .footer-column {
 
 
 /* ************Responsive section *************** */
-@media (min-width: 550px) {
+@media (min-width: 393px) {
 
   .search-bar .map {
     display: flex;
@@ -495,10 +494,17 @@ footer .footer-column {
   .info-section .circle-info { 
     margin: 0 0 0 20px;
   }
+  
+  .popular-section {
+    background: #F2F2F2;
+    display: block;
+    width: 100%;
+    margin-left: -2%;
+  }
 
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
 * {  
     box-sizing: border-box;
   }
@@ -572,18 +578,22 @@ footer .footer-column {
     margin-top: unset;
   }
   
-   .search-bar .fa-search {
+  .search-bar .fa-search {
     color: transparent;
     display: none;
   }
-   
+
+  .popular-section .border-popular { 
+
+    max-width: 350px;
+  }
 }
 
 .info-section .circle-info { 
   margin: 0;
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 950px){
   /******* main **********/
    main {
     flex-direction: column;
@@ -602,7 +612,9 @@ footer .footer-column {
 
   .popular-section {
     margin-left: 0;
-    border-radius: 20px;
+  }
+  .popular-section .border-popular {
+    width: 350px;
   }
 
   .popular-section-items {
@@ -690,4 +702,20 @@ footer .footer-column {
     height: 100%;
     max-height: 380px;
    }
+  }
+  
+  
+  .rounded-background-container {
+    background: #F2F2F2;
+    border-radius: 20px;
+    padding: 16px;
+  }
+  
+  @media screen and (max-width: 768px){
+    .rounded-background-container {
+      border-radius: 0; 
+    }
+  
+    
+    /* Other overrides here */
   }

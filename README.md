@@ -2,102 +2,59 @@
 
 ## Dudas 
 
-1. De la barra <nav> tengo que pegar a la esquina, intente quitando margenes pero no me salio, lo otro es, al hacer hover, debe ponerse ese border-top ?
+Minimo diseño 320 with
 
 
-```css
-  header .accommodation {
-    /* border-top: #0065fc solid 2px;  */
-    padding: 5px;
-    color: none;
-  }
-```
-For next session, no margin on the base, then, next ones, will have some margin on the body.
+## Tareas
 
-On the mobile no margin! thats your base remember
+Pills -> padding (Filters):
+16px 
 
-So I dont have margins in the individuals components, cause the margin is already in the body. 
+gettig rid from alig center in the "pills" 
 
-Work on the versions of the figma
+Revisar el texto muy detallado cada versión
 
+flex 1 to the i circle
 
-## Git issues
+Revisa la pantalla en 320, hay que revisar 
 
-```bash
-ssh -T git@github.com
-cat ~/.ssh/id_ed25519.pub
-```
+100view port with -> 
 
+.popular-section .border-popular { 
+  remove the with: 335 px
 
-
-## Dudas (8/11/2024)
-
-No estoy segura de si es la correcta forma
-```css
-  .search-bar .map {
-    display: flex;
-    width: 100%; 
-    justify-content: center;
-  }
-```
-Para el desktop, max with y anadir la sombra/shadow
-
-Para la separacion del texto:
-```css
-  .popular-section .title-popular {
-    margin: 15px 0 0 15px;  /* margin-top: 15px; margin-left: 15px; */
-  }
-``` 
-
-
-Mover las estrellas al final
-```css
-  .popular-section .title-popular {
-    margin: 15px 0 0 15px; 
-  }
-  
-  .popular-section .star {
-    margin-top: 65px;
-  }
-```
-Considerando hacerlo flex y tratar de mover los items
-
-
-
-
-Quitar esta media query y pasarla a mi mobile first
-```css
-  .accommodation-section .bloc1 {
-    flex-direction: column;
-    width: 100%;
-  }
-  .accommodation-section span{
-    margin-left: 10px;
-  }
-  .accommodation-section{
-    flex: none;
-    width: 90%;
-    margin-right: 0%;
-    padding: 5%;
-    height: auto;
-    background-color: white
-  }
-  .accommodation-section h2 {
-    margin: 25px 0;
-  }
-  .accommodation-section .border-picture{
-    width: 95%;
-    margin-bottom: 20px;
-  }
-  .accommodation-section img{
-    object-fit: cover;
-    height: 180px;
-  }
-  .accommodation-section .border-popular{
-    width: 100%;
-  }
-  
-  .accommodation-section .bloc2 {
-    justify-content: start;
+     mejor min-with 275 and max with of ... from the desing
 }
-```
+
+Marseille accomodation have an extra pading 
+
+  remove the padding and and put a with of 100% 
+
+  the padding is 15px arround
+
+
+Marseille accomodation 1200 : quita el margin de H2. 
+
+
+change the bloc1 and bloc1 to one div
+
+tambien en most popular el padding es 30px y el margin top
+
+REUSABILITY:
+
+padding 30, display block, etc se aplica para varios, podrias crear una clase para reutilizar
+
+1024 > ya deberia estar pasando a ser dos columnas
+
+## Next session 
+
+Fix everything in mobile
+Start tackling the max with issue
+
+## Pasar todo a max-witdh
+
+## Psar a clases
+
+Clases con rounded backgroud gray que se puedan reutilizar -> naming things bases on the style 
+
+Common patter of syle -> gray backgroud, round corners, and so on 
