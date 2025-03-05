@@ -30,15 +30,12 @@ header {
   display: flex;
   margin-top: 0;
   padding-bottom: 0;
+  justify-content: space-between;
   
 }
 
 header img {
-  display: block;
-  margin: auto;
-  min-width: 80px;
-  width: 60px;
-  justify-content: flex-start;
+  max-width: 80px;
 }
 
 header nav {
