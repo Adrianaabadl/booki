@@ -19,28 +19,26 @@ body {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-  /* margin: 25px;
-  margin-bottom: 0;
-  margin-left: 280px;
-  margin-right: 280px; */
-  /* padding: 15px; */
 }
 
 /****** Navigation ***********/
 header {
-  display: block;
   border-bottom: 3px solid #f2f2f2;
   margin: 30px 0;
   padding-bottom: 20px;
   border-bottom: none; 
+  display: flex;
+  margin-top: 0;
+  padding-bottom: 0;
+  
 }
 
 header img {
   display: block;
   margin: auto;
-  /* padding-left: 40px; TODO: revisar en los media query */
   min-width: 80px;
-  width: 60px;  /* Revisar como esta en las media query */
+  width: 60px;
+  justify-content: flex-start;
 }
 
 header nav {
@@ -62,8 +60,6 @@ header ul li {
   flex: 1;
 }
 
-
-
 header ul li .accommodation {
   color: #0065fc;
   border-bottom: 2px solid #0065fc;
@@ -73,7 +69,6 @@ header ul li .accommodation {
 }
 
 header ul li .activity {
-  /* border-bottom: 2px solid #F2F2F2; */
   width: 100%;
   text-align: center;
   padding: 12px;
@@ -94,6 +89,11 @@ header .border-blue:hover {
 }
 
 /****** Search ***********/  
+  .search-bar .fa-search {
+  color: transparent;
+  display: none;
+  }
+
   .search-bar h2 {
     font-size: 22px;
     font-weight: 700;
@@ -170,7 +170,6 @@ header .border-blue:hover {
 }
 
 .filters h3 {
-  /* margin: 30px 5px 5px 10px; */
   font-size: 18px;
   width: auto;
   height: auto;
@@ -198,11 +197,6 @@ header .border-blue:hover {
   box-sizing: border-box;
   gap: 10px
 }
-
-/* .filter-button i {
-  margin-right: 10px;
-  font-size: 20px;
-} */
 
 .filter-button img {
   margin-right: 8px;
@@ -239,7 +233,7 @@ header .border-blue:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px;
+  margin: 0;
 }
 
 .info-section i {
@@ -265,15 +259,11 @@ main {
     flex: 1;
     padding: 30px;
     background: #F2F2F2;
-    /* width: 90%; */
     height: auto;
     border-radius: 20px;
-    /* margin-right: 30px; */
-    /* margin-right: 0%; */
     background-color: white;
   }
 
-  /* ASK */
   header ul li .accommodation {
     color: #0065fc;
     border-bottom: none;
@@ -329,7 +319,6 @@ main {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* gap: 30px */
   }
   
   .accommodation-section .colorblue{
@@ -380,7 +369,6 @@ main {
   
   .popular-section .border-popular {
     display: flex;
-    /* width: 335px; */
     height: 146px;
     border: 2px solid white;
     border-radius: 20px;
@@ -448,7 +436,6 @@ main {
 
   .things-to-do-container {
     display: flex;
-    /* flex-direction: column; */
     gap: 30px;
     width: 100%;
     background-color: transparent;
@@ -469,7 +456,6 @@ footer {
   padding: 20px;
   background-color: #f2f2f2;
   box-sizing: border-box;
-  /* width: 150%;  cause overflow*/ 
   margin: -15px;
   text-align: start;
   flex-direction: column;
@@ -501,16 +487,12 @@ footer .footer-column {
     max-width: 338px;
     justify-content: flex-start;
   }
-/* 
-  .filters-section {
-    margin-top: 25px;
-  } */
 
   .filters {
     display: flex;
-    /* flex-direction: row; */
-    margin: 0;
+    flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     border-radius: solid 2px red;
   }
 
@@ -542,98 +524,10 @@ footer .footer-column {
 
 }
 
-@media screen and (min-width: 700px) {
-/* * {  
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 25px;
-    margin-bottom: 0;
-  } */
-
-  /************* navigation bar ***************/
-
-  /* header ul li .accommodation {
-    color: #0065fc;
-    border-bottom: none;
-    border-top: 2px solid #0065fc;
-    width: 100%;
-    text-align: center;
-  } */
-
-
- header {
-  display: flex;
-  margin-top: 0;
-  padding-bottom: 0;
-  }
-
- header img {
-    margin-left: 0;
-    padding-left: 0;
-  }
-
-  header ul li {
-    margin-right: 80px;
-  }
-
-  header .border-blue {
-    padding: 0;
-  }
-  
-  /* header .accommodation {
-    padding: 5px;
-    color: none;
-  } */
-
-  header .border-blue:hover {
-    border-bottom: none;
-    border-top: none;
-    color: none;
-    text-decoration: none;
-  }
-
-  /* ************ search ***************/
-   .search-bar .search {
-    border-radius: 0 15px 10px 0;
-    height: 50px;
-    width: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 600;
-    background-color: #0065fc;
-    cursor: pointer;
-    margin-top: unset;
-  }
-  
-  .search-bar .fa-search {
-    color: transparent;
-    display: none;
-  }
-
-  .popular-section .border-popular { 
-
-    max-width: 350px;
-  }
-}
-
-.info-section .circle-info { 
-  margin: 0;
-}
 
 @media screen and (min-width: 950px){
   /******* main **********/
-   /* main {
-   flex-direction: column;
-    flex-wrap: wrap;
-    gap: 30px;
-   } */
-
    .accommodation-section  {
-    /* width: 968px; */
     width: 100%;
     background: #F2F2F2;
    }
@@ -668,20 +562,7 @@ footer .footer-column {
   .bloc1, .bloc2 {
     flex-wrap: nowrap;
     gap: 30px;
-  }
-
-  /* .things-to-do-container {
-    flex-direction: row;
-    gap: 30px;
-    justify-content: center;
-  } */
-
-  /* .activity-section {
-    width: 100%;
-    max-width: 1340px;
-    margin-left: 15px;
-   } */
-  
+  }  
   .activity-section img {
     height: 100%;
     max-height: 380px;
@@ -699,48 +580,8 @@ footer .footer-column {
   }
 }
 
-/*
-@media screen and (min-width: 1800px) {
-  body {
-    margin-left: 280px;
-    margin-right: 280px;
-  }
 
-   main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-   }
-
-   .accommodation-section {
-    flex: 1;
-    padding: 30px;
-   }
-
-   .popular-section{
-    flex: 0;
-    padding: 30px;
-   }
-
-   .popular-section-items {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-   .activity-section {
-    width: 100%;
-    max-width: 1340px;
-    margin-left: 15px;
-   }
-
-   .activity-section img {
-    height: 100%;
-    max-height: 380px;
-   }
-  }
-  */
-  .rounded-background-container {
+.rounded-background-container {
     background: #F2F2F2;
     border-radius: 20px;
     padding: 16px;
