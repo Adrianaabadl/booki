@@ -109,8 +109,9 @@ header .border-blue:hover {
 
   .search-bar .map {
     display: flex;
+    max-width: 338px;
     width: 100%; 
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   .search-bar .fa-map-marker-alt {
@@ -164,9 +165,11 @@ header .border-blue:hover {
 
 .filters {
   display: flex;
-  flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: solid 2px red;
 }
 
 .filters h3 {
@@ -192,10 +195,11 @@ header .border-blue:hover {
   text-decoration: none;
   color: #000;
   font-weight: bold;
-  justify-content: center;
   flex: 0 0 48%;
   box-sizing: border-box;
-  gap: 10px
+  gap: 10px;
+  justify-content: start;
+  flex: initial;
 }
 
 .filter-button img {
@@ -475,53 +479,6 @@ footer p {
 footer .footer-column {
   flex: 1;
   margin-bottom: 15px;
-}
-
-
-/* ************Responsive section *************** */
-@media (min-width: 393px) {
-
-  .search-bar .map {
-    display: flex;
-    width: 100%;
-    max-width: 338px;
-    justify-content: flex-start;
-  }
-
-  .filters {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: solid 2px red;
-  }
-
-  .filter-buttoms-section {
-    gap: 10px;
-  }
-
-  .filter-button {
-    justify-content: start;
-    flex: initial;
-  }
-
-  .filters h3 {
-    width: 54px;
-    height: 21px;
-  }
-  
-  /****info******/
-  .info-section .circle-info { 
-    margin: 0 0 0 20px;
-  }
-  
-  .popular-section {
-    background: #F2F2F2;
-    display: block;
-    width: 100%;
-    margin-left: -2%;
-  }
-
 }
 
 
