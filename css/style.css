@@ -549,6 +549,10 @@ footer .footer-column {
     padding: 15px;
   }
 
+  .filter-button {
+    flex: 1
+  }
+
   main {
     display: flex;
     flex-direction: column;
