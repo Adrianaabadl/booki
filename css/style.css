@@ -39,7 +39,6 @@ header img {
 }
 
 header nav {
-  margin: -15px;
   margin-top: 15px;
 }
 
@@ -136,22 +135,19 @@ header .border-blue:hover {
   }
 
   .search-bar .search {
-    width: 50px;
-    display: none;
-  }
-
-  .search-bar .fa-search {
     display: flex;
+    border-radius: 0 15px 10px 0;
+    height: 50px;
+    width: 120px;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
-    background: #0065fc;
     color: white;
+    font-weight: 600;
+    background-color: #0065fc;
     cursor: pointer;
-    width: 50px;
-    margin-left: -10px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    margin-top: unset;
   }
+
 
 /****** Filter ***********/
 .filters-section {
@@ -250,19 +246,17 @@ header .border-blue:hover {
 main {
     display: flex;
     flex-direction: row;
-    /* flex-wrap: nowrap; */
     margin-top: 30px;
     margin-left: 0;
     gap: 30px;
-    /* flex-direction: column-reverse; */
   }
   .accommodation-section {
     flex: 1;
     padding: 30px;
-    background: #F2F2F2;
     height: auto;
     border-radius: 20px;
     background-color: white;
+    background: #F2F2F2;
   }
 
   header ul li .accommodation {
@@ -273,31 +267,30 @@ main {
     text-align: center;
   }
 
-
   .accommodation-section h2 {
-    /* margin: 40px 0 20px 0px; */
     margin-bottom: 30px;
     font-size: 22px;
   }
-  .bloc1 {
+  .bloc1, .bloc2 {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    /* gap: 30px; */
+    flex-wrap: nowrap;
+    gap: 30px;
   }
  
   .accommodation-section img {
     object-fit: cover;
-    width: 100%;
+    width: 96%;
     max-width: 335px;
     height: 124px;
     border-radius: 18px 18px 0 0;
-    margin-left: -5px;
+    margin-left: 5px;
     margin-top: 5px;
   }
   
   .accommodation-section .border-picture {
     width: 100%;
+    width: 268px;
     max-width: 335px;
     height: auto;
     background: white;
@@ -315,11 +308,6 @@ main {
   
   .accommodation-section .star{
     font-size: 90%;
-  }
-  .bloc2 {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
   }
   
   .accommodation-section .colorblue{
@@ -343,7 +331,7 @@ main {
     background: #F2F2F2;
     display: block;
     width: 100%;
-    margin-left: -5%;
+    margin-left: 0;
     padding: 30px;
   }
   
@@ -371,6 +359,8 @@ main {
   .popular-section .border-popular {
     display: flex;
     height: 146px;
+    width: 100%;
+    max-width: 350px;
     border: 2px solid white;
     border-radius: 20px;
     background-color: white;
@@ -383,8 +373,9 @@ main {
   
   .popular-section img {
     object-fit: cover;
-    height: 146px;
-    width: 111.67px;
+    max-height: 146px;
+    height: 99%;
+    max-width: 92px;
     border-radius: 20px 0 0 20px;
     border-top: 5px;
     border-bottom: 5px;
@@ -431,7 +422,8 @@ main {
   .activity-section img {
     object-fit: cover;
     border-radius: 20px 20px 0 0;
-    height: 141px;
+    height: 100%;
+    max-height: 380px;
     width: 100%;
   } 
 
@@ -447,6 +439,7 @@ main {
     box-shadow: 0px 3px 15px 0px #0000001A;  
     margin-bottom: 30px;
     max-width: 295px;
+    width: 100%;
     flex: 1;
   }
 
@@ -457,10 +450,9 @@ footer {
   padding: 20px;
   background-color: #f2f2f2;
   box-sizing: border-box;
-  margin: -15px;
   text-align: start;
-  flex-direction: column;
   margin-top: 40px;
+  height: 100%
 }
 
 footer p b {
@@ -479,71 +471,156 @@ footer .footer-column {
 }
 
 
-@media screen and (min-width: 950px){
-  /******* main **********/
-   .accommodation-section  {
-    width: 100%;
-    background: #F2F2F2;
-   }
+@media screen and (max-width: 1400px) {
 
-  .accommodation-section .border-picture {
-    width: 268px;
+  body {
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
-  .popular-section {
-    margin-left: 0;
-  }
-  .popular-section .border-popular {
-    width: 350px;
+  main {
+    flex-direction: column;
   }
 
   .popular-section-items {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
   }
 
-  .popular-section img {
-    width: 92px;
-    height: 99%;
+}
+
+@media screen and (max-width: 565px) {
+
+  body {
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  .accommodation-section img {
-    width: 97%;
-    margin-left: 4px;
+  header {
+    display: block;
+    padding-bottom: 20px;
   }
+
+  header img {
+    display: block;
+    margin: auto;
+  }
+  
+  header ul {
+    display: flex;
+    margin-top: 30px;
+    gap: 0px;
+  }
+
+  .search-bar, .filters-section {
+    margin: 15px;
+  }
+
+  .search-bar .search {
+    display: none;
+  }
+
+  .search-bar .fa-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background: #0065fc;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    margin-left: -10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  
+  header ul li .accommodation {
+    color: #0065fc;
+    border-top: none;
+    border-bottom: 2px solid #0065fc;
+  }
+
+  header ul li .activity {
+    border-bottom: 2px solid #F2F2F2;
+  }
+
+  .section-bar {
+    padding: 15px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 0;
+    gap: 30px;
+    flex-direction: column-reverse;
+  }
+
+  .accommodation-section {
+    border-radius: 0;
+    background: white;
+
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .filter-buttoms-section {
+    justify-content: center;
+  }
+
+  .activity-section img {
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    height: 100%;
+    max-height: 141px;
+    width: 100%;
+  } 
+
+  .accommodation-section .border-picture {
+    width: 100%;
+    max-width: 350px;
+  }
+  
 
   .bloc1, .bloc2 {
-    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 30px;
-  }  
-  .activity-section img {
-    height: 100%;
-    max-height: 380px;
   }
 
-   footer {
-    flex-direction: row;
-    justify-content: center;
+  .popular-section-items {
+    flex-direction: column;
+  }
+
+  .things-to-do-container {
+    flex-direction: column;
     align-items: center;
   }
 
-  footer .footer-column {
-    padding: 10px 0;
-    text-align: center;
+  .things-to-do-container .border-picture {
+   max-width: 315px;
   }
+
+  footer {
+    flex-direction: column;
+  }
+
 }
 
 
 .rounded-background-container {
     background: #F2F2F2;
     border-radius: 20px;
-    padding: 16px;
   }
   
   @media screen and (max-width: 768px){
     .rounded-background-container {
       border-radius: 0; 
     }
-
   }
