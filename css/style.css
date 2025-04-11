@@ -23,15 +23,10 @@ body {
 
 /****** Navigation ***********/
 header {
-  border-bottom: 3px solid #f2f2f2;
-  margin: 30px 0;
-  padding-bottom: 20px;
+  margin-bottom: 30px;
   border-bottom: none; 
   display: flex;
-  margin-top: 0;
-  padding-bottom: 0;
   justify-content: space-between;
-  
 }
 
 header img {
@@ -209,7 +204,6 @@ header .border-blue:hover {
 .info {
   display: flex;
   align-items: center;
-  margin-top: 20px;
 }
 
 .info-section h2 {
@@ -513,7 +507,7 @@ footer .footer-column {
     gap: 0px;
   }
 
-  .search-bar, .filters-section {
+  .search-bar, .filters-section, .info-section {
     margin: 15px;
   }
 
@@ -547,6 +541,10 @@ footer .footer-column {
 
   .section-bar {
     padding: 15px;
+  }
+
+  .filter-button {
+    flex: 1
   }
 
   main {
