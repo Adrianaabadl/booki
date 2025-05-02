@@ -184,9 +184,8 @@ body {
   justify-content: start;
   flex: initial;
 }
-
-.filter-button img {
-  margin-right: 8px;
+.filter-icon {
+  color: #0065fc
 }
 
 .filter-button:hover {
