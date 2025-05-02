@@ -157,7 +157,6 @@ header .border-blue:hover {
   margin-bottom: 20px;
   justify-content: flex-start;
   align-items: center;
-  border-radius: solid 2px red;
 }
 
 .filters h3 {
