@@ -22,22 +22,22 @@ body {
 }
 
 /****** Navigation ***********/
-header {
+.main-header {
   margin-bottom: 30px;
   border-bottom: none; 
   display: flex;
   justify-content: space-between;
 }
 
-header img {
+.logo {
   max-width: 80px;
 }
 
-header nav {
+.main-nav {
   margin-top: 15px;
 }
 
-header ul {
+.nav-list {
   display: flex;
   margin-top: 30px;
   margin-top: -50px;
@@ -45,13 +45,13 @@ header ul {
   gap: 30px;
 }
 
-header ul li {
+.nav-item {
   display: flex;
   justify-content: center;
   flex: 1;
 }
 
-header ul li .accommodation {
+.accommodation {
   color: #0065fc;
   border-bottom: 2px solid #0065fc;
   width: 100%;
@@ -59,22 +59,18 @@ header ul li .accommodation {
   padding: 10px;
 }
 
-header ul li .activity {
+.activity {
   width: 100%;
   text-align: center;
   padding: 12px;
 }
 
-header ul li a {
+.accommodation, .activity {
   color: black;
   font-size: 19px;
 }
 
-header .border-blue {
-  padding: 20px;
-}
-
-header .border-blue:hover {
+.main-header .border-blue:hover {
   border-top: none;
   color: #0065fc;
 }
@@ -226,9 +222,8 @@ header .border-blue:hover {
   margin: 0;
 }
 
-.info-section i {
+.fas.fa-info {
   font-size: 81%;
-  
 }
 
 .info-section a {
@@ -243,6 +238,7 @@ main {
     margin-left: 0;
     gap: 30px;
   }
+
   .accommodation-section {
     flex: 1;
     padding: 30px;
@@ -490,17 +486,17 @@ footer .footer-column {
     margin-right: 0;
   }
 
-  header {
+  .main-header {
     display: block;
     padding-bottom: 20px;
   }
 
-  header img {
+  .logo {
     display: block;
     margin: auto;
   }
   
-  header ul {
+  .nav-list {
     display: flex;
     margin-top: 30px;
     gap: 0px;
@@ -527,7 +523,6 @@ footer .footer-column {
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
   }
 
-  
   header ul li .accommodation {
     color: #0065fc;
     border-top: none;
