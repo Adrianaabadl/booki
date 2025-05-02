@@ -358,6 +358,12 @@ main {
     transition: 0.8s;
     gap: 15px;
   }
+
+  .card-link {
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
   
   .popular-section img {
     object-fit: cover;
