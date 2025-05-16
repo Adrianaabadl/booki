@@ -1,8 +1,11 @@
 /****** General ***********/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {  
+  box-sizing: border-box;
+}
+
 * {
-  box-sizing: content-box;
   list-style-type: none;
   text-decoration: none;
   margin: 0;
@@ -12,34 +15,34 @@
 }
 
 body {
-  padding: 15px;
+  max-width: 1340px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /****** Navigation ***********/
 header {
-  display: block;
-  border-bottom: 3px solid #f2f2f2;
-  margin: 30px 0;
-  padding-bottom: 20px;
+  margin-bottom: 30px;
   border-bottom: none; 
+  display: flex;
+  justify-content: space-between;
 }
 
 header img {
-  display: block;
-  margin: auto;
-  /* padding-left: 40px; TODO: revisar en los media query */
-  min-width: 80px;
-  width: 60px;  /* Revisar como esta en las media query */
+  max-width: 80px;
 }
 
 header nav {
-  margin: -15px;
   margin-top: 15px;
 }
 
 header ul {
   display: flex;
   margin-top: 30px;
+  margin-top: -50px;
+  padding: 5px;
+  gap: 30px;
 }
 
 header ul li {
@@ -53,12 +56,13 @@ header ul li .accommodation {
   border-bottom: 2px solid #0065fc;
   width: 100%;
   text-align: center;
+  padding: 10px;
 }
 
 header ul li .activity {
-  border-bottom: 2px solid #F2F2F2;
   width: 100%;
   text-align: center;
+  padding: 12px;
 }
 
 header ul li a {
@@ -76,6 +80,11 @@ header .border-blue:hover {
 }
 
 /****** Search ***********/  
+  .search-bar .fa-search {
+  color: transparent;
+  display: none;
+  }
+
   .search-bar h2 {
     font-size: 22px;
     font-weight: 700;
@@ -91,8 +100,9 @@ header .border-blue:hover {
 
   .search-bar .map {
     display: flex;
+    max-width: 338px;
     width: 100%; 
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   .search-bar .fa-map-marker-alt {
@@ -120,38 +130,36 @@ header .border-blue:hover {
   }
 
   .search-bar .search {
-    width: 50px;
-    display: none;
-  }
-
-  .search-bar .fa-search {
     display: flex;
+    border-radius: 0 15px 10px 0;
+    height: 50px;
+    width: 120px;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
-    background: #0065fc;
     color: white;
+    font-weight: 600;
+    background-color: #0065fc;
     cursor: pointer;
-    width: 50px;
-    margin-left: -10px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    margin-top: unset;
   }
+
 
 /****** Filter ***********/
 .filters-section {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 .filters {
   display: flex;
-  flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .filters h3 {
-  margin: 30px 5px 5px 10px;
   font-size: 18px;
   width: auto;
   height: auto;
@@ -174,14 +182,11 @@ header .border-blue:hover {
   text-decoration: none;
   color: #000;
   font-weight: bold;
-  justify-content: center;
   flex: 0 0 48%;
   box-sizing: border-box;
-}
-
-.filter-button i {
-  margin-right: 10px;
-  font-size: 20px;
+  gap: 10px;
+  justify-content: start;
+  flex: initial;
 }
 
 .filter-button img {
@@ -198,7 +203,6 @@ header .border-blue:hover {
 .info {
   display: flex;
   align-items: center;
-  margin-top: 20px;
 }
 
 .info-section h2 {
@@ -207,6 +211,7 @@ header .border-blue:hover {
   font-weight: 300;
   color: rgb(59, 59, 59);
   margin: 5px;
+  flex: 1
 }
 
 .info-section .circle-info {
@@ -218,7 +223,7 @@ header .border-blue:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px;
+  margin: 0;
 }
 
 .info-section i {
@@ -231,42 +236,55 @@ header .border-blue:hover {
 }
 
 /****** Acomodation ***********/
-Main {
+main {
     display: flex;
+    flex-direction: row;
     margin-top: 30px;
-    margin-left: 30px;
+    margin-left: 0;
+    gap: 30px;
   }
   .accommodation-section {
-    background: #F2F2F2;
-    width: 90%;
+    flex: 1;
+    padding: 30px;
     height: auto;
     border-radius: 20px;
-    margin-right: 30px;
-    margin-right: 0%;
-    padding: 5%;
-    background-color: white
+    background-color: white;
+    background: #F2F2F2;
   }
+
+  header ul li .accommodation {
+    color: #0065fc;
+    border-bottom: none;
+    border-top: 2px solid #0065fc;
+    width: 100%;
+    text-align: center;
+  }
+
   .accommodation-section h2 {
-    margin: 40px 0 20px 0px;
+    margin-bottom: 30px;
     font-size: 22px;
   }
-  .bloc1 {
+  .bloc1, .bloc2 {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 30px;
   }
  
   .accommodation-section img {
     object-fit: cover;
-    width: 97%;
+    width: 96%;
+    max-width: 335px;
     height: 124px;
-    border-radius: 20px 25px 0 0;
-    padding-right: 10px;
-    margin: 10px 5px 0px;
+    border-radius: 18px 18px 0 0;
+    margin-left: 5px;
+    margin-top: 5px;
   }
   
-  .accommodation-section .border-picture{
-    width: 335px;
+  .accommodation-section .border-picture {
+    width: 100%;
+    width: 268px;
+    max-width: 335px;
     height: auto;
     background: white;
     margin-bottom: 20px;
@@ -283,11 +301,6 @@ Main {
   
   .accommodation-section .star{
     font-size: 90%;
-  }
-  .bloc2{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
   }
   
   .accommodation-section .colorblue{
@@ -307,12 +320,12 @@ Main {
   
 /****** Popular *******/
   .popular-section {
+    flex: 1;
     background: #F2F2F2;
     display: block;
     width: 100%;
-    border-radius: 0;
-    margin-left: -5%; 
-    padding: 5% 5%;
+    margin-left: 0;
+    padding: 30px;
   }
   
   .popular-section .title-graph {
@@ -338,8 +351,9 @@ Main {
   
   .popular-section .border-popular {
     display: flex;
-    width: 335px;
     height: 146px;
+    width: 100%;
+    max-width: 350px;
     border: 2px solid white;
     border-radius: 20px;
     background-color: white;
@@ -352,8 +366,9 @@ Main {
   
   .popular-section img {
     object-fit: cover;
-    height: 146px;
-    width: 111.67px;
+    max-height: 146px;
+    height: 99%;
+    max-width: 92px;
     border-radius: 20px 0 0 20px;
     border-top: 5px;
     border-bottom: 5px;
@@ -400,18 +415,25 @@ Main {
   .activity-section img {
     object-fit: cover;
     border-radius: 20px 20px 0 0;
-    height: 210px;
+    height: 100%;
+    max-height: 380px;
     width: 100%;
   } 
 
   .things-to-do-container {
+    display: flex;
+    gap: 30px;
     width: 100%;
     background-color: transparent;
+    justify-content: space-between;
   }
 
   .things-to-do-container .border-picture {
     box-shadow: 0px 3px 15px 0px #0000001A;  
     margin-bottom: 30px;
+    max-width: 295px;
+    width: 100%;
+    flex: 1;
   }
 
 /****** Footer ***********/
@@ -421,11 +443,9 @@ footer {
   padding: 20px;
   background-color: #f2f2f2;
   box-sizing: border-box;
-  width: 150%;
-  margin: -15px;
   text-align: start;
-  flex-direction: column;
   margin-top: 40px;
+  height: 100%
 }
 
 footer p b {
@@ -444,129 +464,160 @@ footer .footer-column {
 }
 
 
-/* ************Responsive section *************** */
-@media (min-width: 550px) {
-  .filters-section {
-    margin: 0;
+@media screen and (max-width: 1400px) {
+
+  body {
+    margin-left: 25px;
+    margin-right: 25px;
   }
-  .filters {
+
+  main {
+    flex-direction: column;
+  }
+
+  .popular-section-items {
+    display: flex;
     flex-direction: row;
-  }
-
-  .filter-buttoms-section {
-    gap: 10px;
-  }
-
-  .filter-button {
-    justify-content: start;
-    flex: initial;
-  }
-
-  .filter-button i {
-    margin-right: 20px;
-    font-size: 24px;
-  }
-
-  .filters h3 {
-    margin: 10px 5px 5px 35px;
-    width: 54px;
-    height: 21px;
-  }
-  
-  /****info******/
-  .info-section .circle-info { 
-    margin: 0 0 0 20px;
+    gap: 20px;
   }
 
 }
 
-@media screen and (min-width: 768px) {
-* {  
-    box-sizing: border-box;
-  }
+@media screen and (max-width: 565px) {
+
   body {
-    margin: 25px;
-    margin-bottom: 0;
-  }
- /* ************ navigation bar ***************/
- header {
-  display: flex;
-  margin-top: 0;
-  padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
- header img {
-    margin-left: 50px;
-    padding-left: 0;
+  header {
+    display: block;
+    padding-bottom: 20px;
   }
 
-  header ul {
-    justify-content: flex-end;
-    margin-top: 0;
-  }
-  header ul li {
-    margin-right: 80px;
-  }
-
-  header .border-blue {
-    padding: 0;
+  header img {
+    display: block;
+    margin: auto;
   }
   
-  header .accommodation {
-    padding: 5px;
-    color: none;
+  header ul {
+    display: flex;
+    margin-top: 30px;
+    gap: 0px;
   }
 
-  header .border-blue:hover {
-    border-bottom: none;
-    border-top: none;
-    color: none;
-    text-decoration: none;
+  .search-bar, .filters-section, .info-section {
+    margin: 15px;
   }
 
-  /* ************ search ***************/
-   .search-bar .search {
-    border-radius: 0 15px 10px 0;
-    height: 50px;
-    width: 120px;
+  .search-bar .search {
+    display: none;
+  }
+
+  .search-bar .fa-search {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
+    background: #0065fc;
     color: white;
-    font-weight: 600;
-    background-color: #0065fc;
     cursor: pointer;
-    margin-top: unset;
+    width: 50px;
+    margin-left: -10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
   }
-  
-   .search-bar .fa-search {
-    color: transparent;
-    display: none;
-  }
-   
-}
 
-@media screen and (max-width: 992px){
-  /******* main **********/
+  
+  header ul li .accommodation {
+    color: #0065fc;
+    border-top: none;
+    border-bottom: 2px solid #0065fc;
+  }
+
+  header ul li .activity {
+    border-bottom: 2px solid #F2F2F2;
+  }
+
+  .section-bar {
+    padding: 15px;
+  }
+
+  .filter-button {
+    flex: 1
+  }
+
   main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
     margin-left: 0;
+    gap: 30px;
     flex-direction: column-reverse;
   }
-}
 
+  .accommodation-section {
+    border-radius: 0;
+    background: white;
 
+  }
 
-@media (min-width: 800px) {
-  footer {
-    flex-direction: row;
+  .filters {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .filter-buttoms-section {
     justify-content: center;
+  }
+
+  .activity-section img {
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    height: 100%;
+    max-height: 141px;
+    width: 100%;
+  } 
+
+  .accommodation-section .border-picture {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+
+  .bloc1, .bloc2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .popular-section-items {
+    flex-direction: column;
+  }
+
+  .things-to-do-container {
+    flex-direction: column;
     align-items: center;
   }
 
-  footer .footer-column {
-    padding: 10px 0;
-    text-align: center;
+  .things-to-do-container .border-picture {
+   max-width: 315px;
   }
+
+  footer {
+    flex-direction: column;
+  }
+
 }
 
 
+.rounded-background-container {
+    background: #F2F2F2;
+    border-radius: 20px;
+  }
+  
+  @media screen and (max-width: 768px){
+    .rounded-background-container {
+      border-radius: 0; 
+    }
+  }
