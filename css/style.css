@@ -22,22 +22,22 @@ body {
 }
 
 /****** Navigation ***********/
-header {
+.main-header {
   margin-bottom: 30px;
   border-bottom: none; 
   display: flex;
   justify-content: space-between;
 }
 
-header img {
+.logo {
   max-width: 80px;
 }
 
-header nav {
+.main-nav {
   margin-top: 15px;
 }
 
-header ul {
+.nav-list {
   display: flex;
   margin-top: 30px;
   margin-top: -50px;
@@ -45,13 +45,13 @@ header ul {
   gap: 30px;
 }
 
-header ul li {
+.nav-item {
   display: flex;
   justify-content: center;
   flex: 1;
 }
 
-header ul li .accommodation {
+.accommodation {
   color: #0065fc;
   border-bottom: 2px solid #0065fc;
   width: 100%;
@@ -59,22 +59,18 @@ header ul li .accommodation {
   padding: 10px;
 }
 
-header ul li .activity {
+.activity {
   width: 100%;
   text-align: center;
   padding: 12px;
 }
 
-header ul li a {
+.accommodation, .activity {
   color: black;
   font-size: 19px;
 }
 
-header .border-blue {
-  padding: 20px;
-}
-
-header .border-blue:hover {
+.main-header .border-blue:hover {
   border-top: none;
   color: #0065fc;
 }
@@ -188,9 +184,8 @@ header .border-blue:hover {
   justify-content: start;
   flex: initial;
 }
-
-.filter-button img {
-  margin-right: 8px;
+.filter-icon {
+  color: #0065fc
 }
 
 .filter-button:hover {
@@ -226,9 +221,8 @@ header .border-blue:hover {
   margin: 0;
 }
 
-.info-section i {
+.fas.fa-info {
   font-size: 81%;
-  
 }
 
 .info-section a {
@@ -243,6 +237,7 @@ main {
     margin-left: 0;
     gap: 30px;
   }
+
   .accommodation-section {
     flex: 1;
     padding: 30px;
@@ -252,7 +247,7 @@ main {
     background: #F2F2F2;
   }
 
-  header ul li .accommodation {
+  .accommodation {
     color: #0065fc;
     border-bottom: none;
     border-top: 2px solid #0065fc;
@@ -363,6 +358,12 @@ main {
     transition: 0.8s;
     gap: 15px;
   }
+
+  .card-link {
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
   
   .popular-section img {
     object-fit: cover;
@@ -437,7 +438,7 @@ main {
   }
 
 /****** Footer ***********/
-footer {
+.footer {
   display: flex;
   justify-content: flex-start;
   padding: 20px;
@@ -445,24 +446,25 @@ footer {
   box-sizing: border-box;
   text-align: start;
   margin-top: 40px;
-  height: 100%
+  height: 100%;
 }
 
-footer p b {
-  font-size: 18px;
-}
-
-footer p {
-  font-size: 16px;
-  margin: 15px 0;
-  padding-left: 5px;
-}
-
-footer .footer-column {
+.footer-column {
   flex: 1;
   margin-bottom: 15px;
 }
 
+.footer-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px 0 10px 5px;
+}
+
+.footer-item {
+  font-size: 16px;
+  margin: 10px 0;
+  padding-left: 5px;
+}
 
 @media screen and (max-width: 1400px) {
 
@@ -490,17 +492,17 @@ footer .footer-column {
     margin-right: 0;
   }
 
-  header {
+  .main-header {
     display: block;
     padding-bottom: 20px;
   }
 
-  header img {
+  .logo {
     display: block;
     margin: auto;
   }
   
-  header ul {
+  .nav-list {
     display: flex;
     margin-top: 30px;
     gap: 0px;
@@ -527,14 +529,13 @@ footer .footer-column {
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
   }
 
-  
-  header ul li .accommodation {
+  .accommodation {
     color: #0065fc;
     border-top: none;
     border-bottom: 2px solid #0065fc;
   }
 
-  header ul li .activity {
+  .activity {
     border-bottom: 2px solid #F2F2F2;
   }
 
@@ -582,7 +583,6 @@ footer .footer-column {
     width: 100%;
     max-width: 350px;
   }
-  
 
   .bloc1, .bloc2 {
     display: flex;
@@ -604,12 +604,10 @@ footer .footer-column {
    max-width: 315px;
   }
 
-  footer {
+  .footer {
     flex-direction: column;
   }
-
 }
-
 
 .rounded-background-container {
     background: #F2F2F2;
