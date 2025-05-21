@@ -476,16 +476,39 @@ main {
   main {
     flex-direction: column;
   }
-
+  
   .popular-section-items {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     gap: 20px;
+  }
+  .popular-section-items .card-link {
+    min-width: 350px;
   }
 
 }
 
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 1200px) {
+
+  .things-to-do-container .border-picture {
+   min-height: 450px;
+  }
+  .popular-section-items .card-link {
+    min-width: auto;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .rounded-background-container {
+    border-radius: 0; 
+  }
+}
+
+@media screen and (max-width: 670px) {
 
   body {
     margin-left: 0;
@@ -601,8 +624,8 @@ main {
   }
 
   .things-to-do-container .border-picture {
-   max-width: 315px;
-  }
+    min-height: auto;
+   }
 
   .footer {
     flex-direction: column;
@@ -612,10 +635,4 @@ main {
 .rounded-background-container {
     background: #F2F2F2;
     border-radius: 20px;
-  }
-  
-  @media screen and (max-width: 768px){
-    .rounded-background-container {
-      border-radius: 0; 
-    }
-  }
+}
