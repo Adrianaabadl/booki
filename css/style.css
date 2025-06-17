@@ -1,11 +1,8 @@
 /****** General ***********/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {  
-  box-sizing: border-box;
-}
-
 * {
+  box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
   margin: 0;
@@ -50,14 +47,6 @@
   display: flex;
   justify-content: center;
   flex: 1;
-}
-
-.accommodation {
-  color: #0065fc;
-  border-bottom: 2px solid #0065fc;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
 }
 
 .activity {
@@ -259,6 +248,7 @@ main {
     border-top: 2px solid #0065fc;
     width: 100%;
     text-align: center;
+    padding: 10px;
   }
 
   .accommodation-section h2 {
